@@ -1,19 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <link rel="icon" type="image/svg+xml" href="safrlogo.svg"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-                rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Safr Candles</title>
-    </head>
-    <body style="margin: 0">
-        <div id="root"></div>
-        <script type="module" src="/src/main.tsx"></script>
-    </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Safr Candles - Coming Soon</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+   <header>
+    <div class="logo-container">
+      <img src="safrlogo.svg" alt="Safr Candles Logo" class="logo">
+    </div>
+  </header>
+  
+<div class="coming-soon-container">
+<div class="content">
+<h1 class="brand-name">Safr Candles</h1>
+<h2 class="tagline">Premium, hand-poured candles inspired by South Asian scents and memories</h2>
+<p class="coming-soon-text">Coming Soon</p>
+<!-- Subscription form -->
+<form class="subscription-form" id="emailForm">
+<input type="email" id="emailInput" placeholder="Enter your email" aria-label="Email for updates" required>
+<button type="submit">Subscribe</button>
+</form>
+</div>
+</div>
+
+<script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycby19IqijkMMz55nl_7_TLgTC7dsOYUm4dw2wOw9ydzMoJoSDDW7BdS6_cxFGFgKS2HJ/exec';  // Replace with your Google Apps Script Web App URL
+
+document.getElementById('emailForm').addEventListener('submit', function(event) {
+event.preventDefault();
+
+const email = document.getElementById('emailInput').value;
+
+fetch(scriptURL, {
+method: 'POST',
+mode: 'cors',
+headers: {
+'Content-Type': 'application/x-www-form-urlencoded',
+},
+body: new URLSearchParams({
+'email': email  // This key matches what is expected in your Apps Script
+})
+})
+.then(response => {
+if (response.ok) {
+alert('Thank you for subscribing!');
+} else {
+alert('Something went wrong. Please try again later.');
+}
+})
+.catch(error => alert('Error: ' + error.message));
+
+// Optionally, clear the input field
+document.getElementById('emailInput').value = '';
+});
+</script>
+
+<footer>
+<div class="social-links">
+<a href="https://www.instagram.com/safrcandles?igsh=YnI1OWZmb3VnbDJr" target="_blank" aria-label="Instagram">
+<img src="instagram-icon.png" alt="Instagram" class="instagram-icon">
+</a>
+<a href="https://www.tiktok.com/@safr.candles?_t=8pj4FGuxqeU&_r=1" target="_blank" aria-label="TikTok">
+<img src="tiktok-icon.png" alt="TikTok" class="tiktok-icon">
+</a>
+</div>
+</footer>
+</body>
 </html>

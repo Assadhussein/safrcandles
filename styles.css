@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.logo {
+  width: 150px;  /* Adjust the size as necessary */
+  height: auto;
+}
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-image: url('background.jpeg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .coming-soon-container {
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(165, 137, 26, 0.8); /* Creamy nostalgic overlay */
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .brand-name {
+    font-size: 60px;
+    color: #A52A2A; /* Deep brown */
+  }
+  
+  .tagline {
+    font-size: 20px;
+    color: #5b370f; /* Cinnamon color */
+    margin-top: 10px;
+  }
+  
+  .coming-soon-text {
+    font-size: 25px;
+    color: #8B4513; /* Soft brown */
+    margin-top: 20px;
+  }
+  
+  /* Subscription Form */
+  .subscription-form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .subscription-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 70%;
+    margin-right: 10px;
+  }
+  
+  .subscription-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #A52A2A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .subscription-form button:hover {
+    background-color: #8B4513;
+  }
+  
+  /* Footer */
+  footer {
+    /*background-color: #121212;*/
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Individual social media icon sizes */
+  .instagram-icon {
+    width: 35px;
+  }
+  
+  .tiktok-icon {
+    width: 100px; /* Adjust TikTok size independently */
+  }
+  
+  @media (max-width: 600px) {
+    .brand-name {
+      font-size: 40px;
+    }
+  
+    .tagline {
+      font-size: 18px;
+    }
+  
+    .coming-soon-text {
+      font-size: 20px;
+    }
+  
+    .social-icon {
+      width: 30px;
+    }
+  
+    .subscription-form input, .subscription-form button {
+      font-size: 14px;
+    }
+  }
+  
