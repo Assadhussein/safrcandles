@@ -1,62 +1,136 @@
+/* Reset some default browser styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-
-.logo-container {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
-.logo {
-  width: 150px;  /* Adjust the size as necessary */
-  height: auto;
-}
   
+  /* Use a clean, modern font */
   body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #fff; /* or a slightly tinted background (#f3f3f3) */
+  }
+  
+  /* Navigation Bar */
+  .navbar {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    /* space-between pushes items to the far left and right, 
+       leaving the center item in the middle */
     justify-content: space-between;
-    min-height: 100vh;
-    background-image: url('background.jpeg'); /* Replace with your image */
-    background-size: cover;
-    background-position: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
   }
   
-  .coming-soon-container {
-    text-align: center;
-    padding: 50px;
-    background-color: rgba(165, 137, 26, 0.8); /* Creamy nostalgic overlay */
-    border-radius: 15px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-    margin: auto;
-    max-width: 600px;
+  .logo {
+    width: 80px;  /* Adjust as needed */
+    height: auto;
+    display: block;
+  }
+  
+  .nav-links a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 80vh; /* full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 2rem;
+    /* Optional overlay */
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    object-fit: cover; /* so the video fills the container */
+    z-index: -1;       /* place behind hero-content */
+  }
+
+  .hero-content {
+    text-align: center;
+    color: #fff;
+    max-width: 600px;
   }
   
-  .brand-name {
-    font-size: 60px;
-    color: #A52A2A; /* Deep brown */
+  .hero-content h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
   }
   
-  .tagline {
-    font-size: 20px;
-    color: #5b370f; /* Cinnamon color */
-    margin-top: 10px;
+  .hero-content p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
   }
   
-  .coming-soon-text {
-    font-size: 25px;
-    color: #8B4513; /* Soft brown */
-    margin-top: 20px;
+  #learn-more-btn {
+    border: none;
+    outline: none;
+    background: #b3b0b0;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 38rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+
   }
   
-  /* Subscription Form */
-  .subscription-form {
-    margin-top: 20px;
+  #learn-more-btn:hover {
+    background: #f3f3f300;
+    color: #b3b0b0;
+  }
+  
+  /* Content Sections */
+  .content-section {
+    padding: 6rem 2rem;
+    text-align: center;
+  }
+  
+#services.content-section {
+    padding: 10px;
+}
+
+  .content-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 900;
+  }
+  
+  .content-section p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+ 
+ .products {
+    width: 400px;
+    height: 400px;
+    padding: 25px 50px 25px 50px;
+    display: inline-flexbox;
+    text-align: center;
+ }
+  
+   /* Subscription Form */
+   .subscription-form {
+    margin-top: 30px;
     display: flex;
     justify-content: center;
   }
@@ -73,58 +147,99 @@
   .subscription-form button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #A52A2A;
-    color: white;
+    background-color: #b3b0b0;
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
   
   .subscription-form button:hover {
-    background-color: #8B4513;
-  }
-  
+    background-color: #063c11;
+    color: #b3b0b0;
+  } 
+
   /* Footer */
-  footer {
-    /*background-color: #121212;*/
-    padding: 10px 0;
+  .footer {
     text-align: center;
+    padding: 2rem;
+    background: #f9f9f9;
+    margin-top: 2rem;
   }
-  
-  .social-links {
-    display: flex;
+
+  /* From Uiverse.io by roajuan93 */ 
+.card {
+    width: fit-content;
+    height: fit-content;
+    display: inline-flex;
+    margin: 0 auto;
+    align-items: center;
     justify-content: center;
+    padding: 25px 25px;
     gap: 20px;
   }
   
-  /* Individual social media icon sizes */
-  .instagram-icon {
-    width: 35px;
+  /* for all social containers*/
+  .socialContainer {
+    width: 52px;
+    height: 52px;
+    border-radius: 5px;
+    background-color: #b3b0b0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: 0.3s;
+  }
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #d62976;
+    transition-duration: 0.3s;
+  }
+  /* Tiktok*/
+  .containerTwo:hover {
+    background-color: #25f4ee;
+    transition-duration: 0.3s;
+  }
+  /* Facebook*/
+  .containerThree:hover {
+    background-color: #1877f2;
+    transition-duration: 0.3s;
+  }
+  /* Whatsapp*/
+  .containerFour:hover {
+    background-color: green;
+    transition-duration: 0.3s;
   }
   
-  .tiktok-icon {
-    width: 100px; /* Adjust TikTok size independently */
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: 0.3s;
   }
   
-  @media (max-width: 600px) {
-    .brand-name {
-      font-size: 40px;
+  .socialSvg {
+    width: 19px;
+  }
+  .largeIcon {
+    width: 27px; /* Ancho específico solo para el icono de TikTok */
+  }
+  .socialSvg path {
+    fill: rgb(255, 255, 255);
+  }
+  
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
     }
   
-    .tagline {
-      font-size: 18px;
-    }
-  
-    .coming-soon-text {
-      font-size: 20px;
-    }
-  
-    .social-icon {
-      width: 30px;
-    }
-  
-    .subscription-form input, .subscription-form button {
-      font-size: 14px;
+    100% {
+      transform: translateY(0);
+      opacity: 1;
     }
   }
   
