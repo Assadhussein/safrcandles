@@ -7,7 +7,7 @@
   
   /* Use a clean, modern font */
   body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Jost', sans-serif;
     color: #333;
     background-color: #fff; /* or a slightly tinted background (#f3f3f3) */
   }
@@ -126,7 +126,7 @@
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 70%;
+    width: 25%;
     margin-right: 10px;
   }
   
@@ -187,16 +187,6 @@
     background-color: #25f4ee;
     transition-duration: 0.3s;
   }
-  /* Facebook*/
-  .containerThree:hover {
-    background-color: #1877f2;
-    transition-duration: 0.3s;
-  }
-  /* Whatsapp*/
-  .containerFour:hover {
-    background-color: green;
-    transition-duration: 0.3s;
-  }
   
   .socialContainer:active {
     transform: scale(0.9);
@@ -215,6 +205,111 @@
   
   .socialContainer:hover .socialSvg {
     animation: slide-in-top 0.3s both;
+  }
+
+  /**************************************
+  CONTACT SECTION CARD STYLES
+***************************************/
+
+/* A wrapper to give a card feel */
+.contact-card {
+    background-color: #fff;            /* Card background */
+    border-radius: 8px;                /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 2rem;
+    max-width: 600px;                  /* Limit width for a card look */
+    margin: 0 auto;                    /* Center horizontally */
+    text-align: left;
+  }
+  
+  /* Make the heading stand out */
+  .contact-card h2 {
+    margin-bottom: 1rem;
+    font-weight: 900;
+    text-align: center;
+  }
+  
+  /* Spacing under the paragraph in the card */
+  .contact-card p {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Adjust your form within the card */
+  #contactForm {
+    display: block;
+    flex-direction: column;
+    align-items: left;
+    gap: 1.2rem;
+  }
+  
+  /* Keep the label and input grouped nicely */
+  #contactForm .form-group {
+    display: block;
+    margin-top: 20px;
+  }
+  
+  /* Label styling */
+  #contactForm label {
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
+  }
+  
+  /* Text fields styling (Name, Email, Message) */
+  #contactForm input[type="text"],
+  #contactForm input[type="email"],
+  #contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+  }
+  
+  /* Textarea can be resizable vertically */
+  #contactForm textarea {
+    resize: vertical;
+    font-family: inherit;
+    width: 100%;
+  }
+  
+  /* Send button style */
+  #contactForm button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #b3b0b0;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  #contactForm button:hover {
+    background-color: #063c11;
+    color: #b3b0b0;
+  }
+  
+  /* The thank-you message container, hidden by default. */
+  .thank-you-message {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 600px;
+    margin: 2rem auto 0;
+    text-align: center;
+  }
+  
+  .thank-you-message p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  /* Utility class to hide/show elements */
+  .hidden {
+    display: none !important;
   }
   
   @keyframes slide-in-top {
