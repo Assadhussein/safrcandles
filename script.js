@@ -76,3 +76,13 @@ contactForm.addEventListener('submit', function(event) {
       errorMessage.classList.remove('hidden');
     });
 });
+
+// Select elements
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelectorAll('.nav-links');
+
+// Toggle the visibility of the nav menu
+hamburger.addEventListener('click', () => {
+  document.querySelector('.nav-links.nav-right').classList.toggle('show');
+  document.querySelector('.nav-links.nav-left').classList.toggle('show');
+});

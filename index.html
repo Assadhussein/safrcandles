@@ -33,13 +33,25 @@
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </div>
+
+        <!-- Hamburger Menu -->
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+         </button>
       </nav>
 
   <!-- Hero Section -->
   <section class="hero">
     <video autoplay muted loop id="myVideo">
         <source src="media/safrvideo.mp4" type="video/mp4">
-      </video>
+    </video>
+      <!-- Overlay Image -->
+  <img src="media/overlay.png" alt="Overlay" class="overlay-image">
+</div>
+
+
     <div class="hero-content">
     </div>
   </section>
@@ -55,8 +67,7 @@
   </section>
 
   <section id="services" class="content-section">
-    <h2>See What's Cooking</h2>
-    <p>Some of the scents we are working on</p>
+    <h2>The Collection</h2>
     <img src="media/logo.png" alt="Safr Candles" class="products">
     <img src="media/logo.png" alt="Safr Candles" class="products">
     <img src="media/logo.png" alt="Safr Candles" class="products">
@@ -78,13 +89,6 @@
         <!-- FormSubmit hidden fields (customize as desired) -->
         <input type="hidden" name="_subject" value="New Contact Form Submission" />
         <input type="hidden" name="_captcha" value="false" />
-        
-        <!-- 
-          If you want a different success method:
-          - For a redirect on success, use: <input type="hidden" name="_next" value="thankyou.html" />
-          - If you want the thank-you message inline, omit _next as we do here,
-            and handle the UI with JavaScript instead.
-        -->
         
         <!-- Name -->
         <div class="form-group">
