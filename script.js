@@ -46,43 +46,11 @@ alert('Something went wrong. Please try again later.');
 document.getElementById('emailInput').value = '';
 });
 
-const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', function(event) {
-  event.preventDefault(); // Stop the default form submission
-
-  const formData = new FormData(contactForm);
-
-  fetch('https://script.google.com/macros/s/AKfycbwis5zZ9jl5B9aeM7n6I2eWZp3wMgHQ7sohZObSDrFWipk915rWEhu01Igl5Drbe2vc/exec', {
-    method: 'POST',
-    body: formData, // Send the form data
-  })
-    .then(response => response.json()) // Parse the response as JSON
-    .then(data => {
-      if (data.success) {
-        // Hide the form and show thank-you message
-        contactForm.classList.add('hidden');
-        const thankYouMessage = document.getElementById('thankYouMessage');
-        thankYouMessage.classList.remove('hidden');
-      } else {
-        // Handle errors where success = false
-        alert('Something went wrong. Please try again.');
-      }
-    })
-    .catch(err => {
-      console.error('Form submission error:', err);
-
-      // Optionally show an error message to the user
-      const errorMessage = document.getElementById('errorMessage');
-      errorMessage.classList.remove('hidden');
-    });
-});
-
 // Select elements
 const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelectorAll('.nav-links');
+const mobileNav = document.querySelector('.nav-links.nav-mobile');
 
-// Toggle the visibility of the nav menu
+// On click, toggle the single mobile nav
 hamburger.addEventListener('click', () => {
-  document.querySelector('.nav-links.nav-right').classList.toggle('show');
-  document.querySelector('.nav-links.nav-left').classList.toggle('show');
+  mobileNav.classList.toggle('show');
 });

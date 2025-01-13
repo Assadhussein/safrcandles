@@ -3,17 +3,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  /* Use a clean, modern font */
-  body {
-    font-family: 'Jost', sans-serif;
+}
+
+/* Use a clean, modern font */
+body {
+    font-family: 'Butler';
     color: #333;
-    background-color: #fff; /* or a slightly tinted background (#f3f3f3) */
-  }
-  
-  /* Navigation Bar */
-  .navbar {
+    background-color: #fff;
+    /* or a slightly tinted background (#f3f3f3) */
+}
+
+/* Navigation Bar */
+.navbar {
     display: flex;
     align-items: center;
     /* space-between pushes items to the far left and right, 
@@ -21,40 +22,43 @@
     justify-content: space-between;
     padding: 1rem 2rem;
     background-color: #fff;
-  }
-  
-  .hamburger {
-    display: none; /* Hidden by default */
+}
+
+.hamburger {
+    display: none;
+    /* Hidden by default */
     flex-direction: column;
     gap: 5px;
     background: none;
     border: none;
     cursor: pointer;
-  }
-  
-  .hamburger .bar {
+}
+
+.hamburger .bar {
     width: 25px;
     height: 3px;
     background-color: #333;
-  }
+}
 
-  .logo {
-    width: 80px;  /* Adjust as needed */
+.logo {
+    width: 80px;
+    /* Adjust as needed */
     height: auto;
     display: block;
-  }
-  
-  .nav-links a {
+}
+
+.nav-links a {
     margin: 0 1rem;
     text-decoration: none;
     color: #333;
     font-size: 14px;
     font-weight: 600;
-  }
-  
-  /* Hero Section */
-  .hero {
-    height: 80vh; /* full viewport height */
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    /* full viewport height */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,99 +67,115 @@
     /* Optional overlay */
     background-blend-mode: overlay;
     background-color: rgba(0, 0, 0, 0.3);
-  }
-  
-  .hero video {
+}
+
+.hero video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* so the video fills the container */
-    z-index: -1;       /* place behind hero-content */
-  }
+    object-fit: cover;
+    /* so the video fills the container */
+    z-index: -1;
+    /* place behind hero-content */
+}
 
-  .hero .overlay-image {
+.hero .overlay-image {
     position: absolute;
     object-fit: scale-down;
-    opacity: 0; /* Initially hidden */
+    opacity: 0;
+    /* Initially hidden */
     animation: fadeIn 2s ease-in forwards;
     width: 50%;
     height: 50%;
-  }
+}
 
-  .hero-content {
+.hero-content {
     text-align: center;
     color: #fff;
     max-width: 600px;
-  }
-  
-  .hero-content h1 {
+}
+
+.hero-content h1 {
     font-size: 3rem;
     font-weight: 900;
     margin-bottom: 1rem;
-  }
-  
-  .hero-content p {
+}
+
+.hero-content p {
     font-size: 1.2rem;
     font-weight: 300;
     margin-bottom: 2rem;
-  }
-  
-  #learn-more-btn:hover {
-    background: #f3f3f300;
-    color: #b3b0b0;
-  }
-  
-  /* Content Sections */
-  .content-section {
-    padding: 6rem 2rem;
-    text-align: center;
-  }
-  
-#services.content-section {
-    padding: 10px;
-    background-color: #f7f7ef;
 }
 
-  .content-section h2 {
-    font-size: 2rem;
+#learn-more-btn:hover {
+    background: #f3f3f300;
+    color: #b3b0b0;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+#services.content-section {
+    padding: 70px;
+    background-color: #eaf2f4;
+}
+
+#socials.content-section {
+    padding: 10px;
+    background-color: #eaf2f4;
+}
+
+.content-section h2 {
+    font-size: 14px;
     margin-bottom: 1rem;
-    font-weight: 900;
-  }
-  
-  .content-section p {
+    font-weight: 300;
+    font-family: Futura, sans-serif;
+    color: #123963;
+    letter-spacing: 5px;
+
+}
+
+.content-section p {
     max-width: 600px;
     margin: 0 auto;
     font-size: 1.1rem;
     font-weight: 300;
-  }
- 
- .products {
-    width: 300px;
-    height: 300px;
+}
+
+#work.content-section p {
+    font-size: 36px;
+}
+
+.products {
+    width: 270px;
+    height: 310px;
     padding: 10px;
     display: inline-flexbox;
     text-align: center;
- }
-  
-   /* Subscription Form */
-   .subscription-form {
+}
+
+/* Subscription Form */
+.subscription-form {
     margin-top: 30px;
     display: flex;
     justify-content: center;
-  }
-  
-  .subscription-form input {
+}
+
+.subscription-form input {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 25%;
+    width: 35%;
     margin-right: 10px;
-  }
-  
-  .subscription-form button {
+}
+
+.subscription-form button {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #b3b0b0;
@@ -163,22 +183,22 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .subscription-form button:hover {
+}
+
+.subscription-form button:hover {
     background-color: #063c11;
     color: #b3b0b0;
-  } 
+}
 
-  /* Footer */
-  .footer {
+/* Footer */
+.footer {
     text-align: center;
     padding: 2rem;
-    background: #f9f9f9;
+    background: #eaf2f4;
     margin-top: 2rem;
-  }
+}
 
-  /* From Uiverse.io by roajuan93 */ 
+/* From Uiverse.io by roajuan93 */
 .card {
     width: fit-content;
     height: fit-content;
@@ -188,10 +208,10 @@
     justify-content: center;
     padding: 25px 25px;
     gap: 20px;
-  }
-  
-  /* for all social containers*/
-  .socialContainer {
+}
+
+/* for all social containers*/
+.socialContainer {
     width: 52px;
     height: 52px;
     border-radius: 5px;
@@ -201,193 +221,124 @@
     justify-content: center;
     overflow: hidden;
     transition-duration: 0.3s;
-  }
-  /* instagram*/
-  .containerOne:hover {
+}
+
+/* instagram*/
+.containerOne:hover {
     background-color: #d62976;
     transition-duration: 0.3s;
-  }
-  /* Tiktok*/
-  .containerTwo:hover {
+}
+
+/* Tiktok*/
+.containerTwo:hover {
     background-color: #25f4ee;
     transition-duration: 0.3s;
-  }
-  
-  .socialContainer:active {
+}
+
+/* For the new email icon container */
+.containerThree:hover {
+    background-color: #ea4335;
+    /* or another color you prefer */
+    transition-duration: 0.3s;
+}
+
+.socialContainer:active {
     transform: scale(0.9);
     transition-duration: 0.3s;
-  }
-  
-  .socialSvg {
+}
+
+.socialSvg {
     width: 19px;
-  }
-  .largeIcon {
-    width: 27px; /* Ancho específico solo para el icono de TikTok */
-  }
-  .socialSvg path {
+}
+
+.largeIcon {
+    width: 27px;
+    /* Ancho específico solo para el icono de TikTok */
+}
+
+.socialSvg path {
     fill: rgb(255, 255, 255);
-  }
-  
-  .socialContainer:hover .socialSvg {
+}
+
+.socialContainer:hover .socialSvg {
     animation: slide-in-top 0.3s both;
+}
+
+/* 1) Hide the mobile nav container by default */
+.nav-links.nav-mobile {
+    display: none;
+  }
+  .nav-links.nav-mobile.show {
+    display: block;
   }
 
-  /**************************************
-  CONTACT SECTION CARD STYLES
-***************************************/
+@media (max-width: 768px) {
 
-/* A wrapper to give a card feel */
-.contact-card {
-    background-color: #fff;            /* Card background */
-    border-radius: 8px;                /* Rounded corners */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    padding: 2rem;
-    max-width: 600px;                  /* Limit width for a card look */
-    margin: 0 auto;                    /* Center horizontally */
-    text-align: left;
-  }
+    .hamburger {
+        display: flex;
+        /* Show hamburger button */
+    }
   
-  /* Make the heading stand out */
-  .contact-card h2 {
-    margin-bottom: 1rem;
-    font-weight: 900;
-    text-align: center;
-  }
-  
-  /* Spacing under the paragraph in the card */
-  .contact-card p {
-    margin-bottom: 1.5rem;
-  }
-  
-  /* Adjust your form within the card */
-  #contactForm {
-    display: block;
-    flex-direction: column;
-    align-items: left;
-    gap: 1.2rem;
-  }
-  
-  /* Keep the label and input grouped nicely */
-  #contactForm .form-group {
-    display: block;
-    margin-top: 20px;
-  }
-  
-  /* Label styling */
-  #contactForm label {
-    font-weight: 600;
-    margin-bottom: 0.4rem;
-    font-size: 1rem;
-  }
-  
-  /* Text fields styling (Name, Email, Message) */
-  #contactForm input[type="text"],
-  #contactForm input[type="email"],
-  #contactForm textarea {
-    width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-family: inherit;
-  }
-  
-  /* Textarea can be resizable vertically */
-  #contactForm textarea {
-    resize: vertical;
-    font-family: inherit;
-    width: 100%;
-  }
-  
-  /* Send button style */
-  #contactForm button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #b3b0b0;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-  }
-  
-  #contactForm button:hover {
-    background-color: #063c11;
-    color: #b3b0b0;
-  }
-  
-  /* The thank-you message container, hidden by default. */
-  .thank-you-message {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    max-width: 600px;
-    margin: 2rem auto 0;
-    text-align: center;
-  }
-  
-  .thank-you-message p {
-    font-size: 1.2rem;
-    color: #333;
-  }
-  
-  /* Utility class to hide/show elements */
-  .hidden {
-    display: none !important;
-  }
-  
-  @media (max-width: 768px) {
+    /* Hide existing left and right nav links */
     .nav-links.nav-left,
     .nav-links.nav-right {
-      display: none; 
-      flex-direction: column;
-      gap: 1rem;
+      display: none !important;
+    }
+  
+    /* Show the mobile nav container */
+    .nav-links.nav-mobile {
+      /*display: block;*/
       background-color: #fff;
-      position: absolute;
-      top: 60px;
-      width: 200px;
+      position: absolute; /* optional if you want it floating */
+      top: 60px;         /* adjust to line up under your navbar */
+      right: 0;          /* or left: 0; depending on your design */
+      width: 200px;      /* adjust as needed */
       padding: 1rem;
       box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+      z-index: 9999;
     }
   
-    /* Position them differently if you want both to appear */
-    .nav-links.nav-left {
-      right: 0;
+    .nav-links.nav-mobile ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
   
-    .nav-links.nav-right {
-      right: 0;
-      margin-top: 62px;
-    }
-    .nav-links.show {
-      display: flex; /* Show menu when toggled */
+    .nav-links.nav-mobile li {
+      margin: 1rem 0;
+      /* If you want each link spaced out */
     }
   
-    .hamburger {
-      display: flex; /* Show hamburger button */
+    .nav-links.nav-mobile a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
     }
-  }  
-  
-  @keyframes slide-in-top {
-    0% {
-      transform: translateY(-50px);
-      opacity: 0;
-    }
-  
-    100% {
-      transform: translateY(0);
-      opacity: 1;
+
+    .subscription-form input {
+        width: 80%;
     }
   }
+
+  @keyframes slide-in-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 /* Fade-in animation */
 @keyframes fadeIn {
     from {
-      opacity: 0;
+        opacity: 0;
     }
+
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }  
-  
+}
