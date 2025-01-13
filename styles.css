@@ -47,11 +47,17 @@ body {
     display: block;
 }
 
-.nav-links a {
-    margin: 0 1rem;
+.nav-links.nav-left, 
+.nav-links.nav-right a {
     text-decoration: none;
-    color: #333;
-    font-size: 14px;
+    color: #123963;
+    font-weight: 600;
+}
+
+.nav-links.nav-left, 
+.nav-links.nav-right a:visited {
+    text-decoration: none;
+    color: #123963;
     font-weight: 600;
 }
 
@@ -311,7 +317,7 @@ body {
   
     .nav-links.nav-mobile a {
       text-decoration: none;
-      color: #333;
+      color: #123963;
       font-weight: 600;
     }
 
