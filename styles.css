@@ -293,7 +293,6 @@ body {
   
     /* Show the mobile nav container */
     .nav-links.nav-mobile {
-      /*display: block;*/
       background-color: #fff;
       position: absolute; /* optional if you want it floating */
       top: 60px;         /* adjust to line up under your navbar */
@@ -303,7 +302,7 @@ body {
       box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
       z-index: 9999;
     }
-  
+
     .nav-links.nav-mobile ul {
       list-style: none;
       margin: 0;
@@ -324,6 +323,15 @@ body {
     .subscription-form input {
         width: 80%;
     }
+
+    .collection-container {
+
+        display: flex;
+        flex-direction: column;
+        margin: 5%;
+        gap: 4%;
+    
+     }
   }
 
   @keyframes slide-in-top {
@@ -454,3 +462,78 @@ body {
   .hidden {
     display: none !important;
   }
+
+  /* From Uiverse.io by gharsh11032000 */ 
+
+.collection-container {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin: 5%;
+    gap: 4%;
+
+ }
+  
+.catalogue-card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin: 3%;
+  }
+  
+  .catalogue-card svg {
+    width: 48px;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .ccatalogue-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  }
+  
+  .catalogue-card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .catalogue-card:hover .catalogue-card__content {
+    transform: rotateX(0deg);
+  }
+  
+  .catalogue-card__title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+  }
+  
+  .catalogue-card:hover svg {
+    scale: 0;
+  }
+  
+  .catalogue-card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+  }
+  
