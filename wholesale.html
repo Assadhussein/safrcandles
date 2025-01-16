@@ -48,7 +48,7 @@
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="index.html#services">Services</a></li>
                 <li><a href="index.html#work">Welcome</a></li>
-                <li><a href="catalogue.html">Collection/a></li>
+                <li><a href="catalogue.html">Collection</a></li>
                 <li><a href="#socials">Contact</a></li>
                 <li><a href="wholesale.html">Wholesale</a></li>
             </ul>
@@ -62,11 +62,7 @@
             <p>Send us some information about your ideas and we'll get back to you as soon as possible</p>
 
             <!-- Contact Form -->
-            <form id="contactForm" method="POST" action="https://formsubmit.co/safrcandles@gmail.com">
-                <!-- FormSubmit hidden fields (customize as desired) -->
-                <input type="hidden" name="_subject" value="New Contact Form Submission" />
-                <input type="hidden" name="_captcha" value="false" />
-
+            <form id="contactForm">
                 <!-- Name -->
                 <div class="form-group">
                     <label for="contact-name">Name:</label>
@@ -97,6 +93,11 @@
                 Thank you for getting in touch with us, someone from our team will reach out to you very soon!
             </p>
         </div>
+
+        <div id="errorMessage" class="error-message hidden">
+            <p>Something went wrong. Please try again later.</p>
+        </div>
+        
     </section>
 
     <!-- Footer (Optional) -->

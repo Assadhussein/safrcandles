@@ -61,33 +61,38 @@ document.getElementById('emailForm').addEventListener('submit', function (event)
     document.getElementById('emailInput').value = '';
 });
 
-const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', function (event) {
-    event.preventDefault(); // Stop the default form submission
+// Google Apps Script API URL
+const scriptURL1 = 'https://script.google.com/macros/s/AKfycbwis5zZ9jl5B9aeM7n6I2eWZp3wMgHQ7sohZObSDrFWipk915rWEhu01Igl5Drbe2vc/exec';
 
+// Reference the form element
+const contactForm = document.getElementById('contactForm');
+
+contactForm.addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Gather form data
     const formData = new FormData(contactForm);
 
-    fetch('https://script.google.com/macros/s/AKfycbwis5zZ9jl5B9aeM7n6I2eWZp3wMgHQ7sohZObSDrFWipk915rWEhu01Igl5Drbe2vc/exec', {
+    // Post form data to the Google Apps Script API
+    fetch(scriptURL1, {
         method: 'POST',
-        body: formData, // Send the form data
+        body: formData
     })
-        .then(response => response.json()) // Parse the response as JSON
+        .then(response => response.json()) // Handle JSON response
         .then(data => {
             if (data.success) {
-                // Hide the form and show thank-you message
+                // Hide the form and show the thank-you message
                 contactForm.classList.add('hidden');
-                const thankYouMessage = document.getElementById('thankYouMessage');
-                thankYouMessage.classList.remove('hidden');
+                document.getElementById('thankYouMessage').classList.remove('hidden');
             } else {
                 // Handle errors where success = false
-                alert('Something went wrong. Please try again.');
+                document.getElementById('errorMessage').classList.remove('hidden');
             }
         })
         .catch(err => {
-            console.error('Form submission error:', err);
+            console.error('Error submitting form:', err);
 
-            // Optionally show an error message to the user
-            const errorMessage = document.getElementById('errorMessage');
-            errorMessage.classList.remove('hidden');
+            // Show the error message
+            document.getElementById('errorMessage').classList.remove('hidden');
         });
 });
