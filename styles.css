@@ -15,14 +15,17 @@ body {
 
 /* Navigation Bar */
 .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
     align-items: center;
     /* space-between pushes items to the far left and right, 
        leaving the center item in the middle */
     justify-content: space-between;
     padding: 1rem 2rem;
-    background-color: #fff;
-    height: 80px;
+    background: linear-gradient(180deg, #ffffff 90%, #ffffff98 80%);
+    height: 100px;
 }
 
 .hamburger {
@@ -143,6 +146,10 @@ body {
 #socials.content-section {
     padding: 10px;
     background-color: #eaf2f4;
+}
+
+#wholesale-form.content-section {
+    padding-top: 50px;
 }
 
 .content-section h2 {
@@ -283,6 +290,14 @@ body {
 /* 1) Hide the mobile nav container by default */
 .nav-links.nav-mobile {
     display: none;
+    background-color: #fff;
+    position: absolute; /* Allows for flexible positioning */
+    top: 60px; /* Adjust to line up under your navbar */
+    left: 0; /* Change this to left: 0 to align it to the left */
+    width: 200px; /* Adjust as needed */
+    padding: 1rem;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+    z-index: 9999;
   }
   .nav-links.nav-mobile.show {
     display: block;
