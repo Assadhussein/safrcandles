@@ -22,6 +22,7 @@ body {
     justify-content: space-between;
     padding: 1rem 2rem;
     background-color: #fff;
+    height: 80px;
 }
 
 .hamburger {
@@ -41,15 +42,23 @@ body {
 }
 
 .logo {
+    position: auto;
     width: 80px;
     /* Adjust as needed */
     height: auto;
-    display: block;
+    display:block;
+    align-self: center;
+}
+
+.logo-link {
+    position: absolute; /* Remove from normal document flow */
+    left: 50%; /* Move to the center horizontally */
+    transform: translateX(-50%); /* Adjust to center the logo */
 }
 
 .nav-links.nav-left , 
 .nav-links.nav-right {
-    padding: 5px;
+    gap: 5px;
     word-spacing: 15px;
 }
 
@@ -146,13 +155,14 @@ body {
 }
 
 .content-section p {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     font-size: 1.1rem;
     font-weight: 300;
+    text-align: center;
 }
 
-#work.content-section p {
+#work.content-section p, #about.content-section p {
     font-size: 36px;
 }
 
