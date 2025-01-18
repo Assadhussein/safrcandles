@@ -227,14 +227,14 @@ body {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #b3b0b0;
-    color: black;
+    color: #ffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .subscription-form button:hover {
-    background-color: #063c11;
+    background-color: #ffffff;
     color: #b3b0b0;
 }
 
@@ -436,7 +436,7 @@ body {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #b3b0b0;
-    color: black;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -444,7 +444,7 @@ body {
 }
 
 #contactForm button:hover {
-    background-color: #063c11;
+    background-color: white;
     color: #b3b0b0;
 }
 
