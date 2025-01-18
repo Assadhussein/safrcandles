@@ -49,23 +49,26 @@ body {
     width: 80px;
     /* Adjust as needed */
     height: auto;
-    display:block;
+    display: block;
     align-self: center;
 }
 
 .logo-link {
-    position: absolute; /* Remove from normal document flow */
-    left: 50%; /* Move to the center horizontally */
-    transform: translateX(-50%); /* Adjust to center the logo */
+    position: absolute;
+    /* Remove from normal document flow */
+    left: 50%;
+    /* Move to the center horizontally */
+    transform: translateX(-50%);
+    /* Adjust to center the logo */
 }
 
-.nav-links.nav-left , 
+.nav-links.nav-left,
 .nav-links.nav-right {
     gap: 5px;
     word-spacing: 15px;
 }
 
-.nav-links.nav-left a, 
+.nav-links.nav-left a,
 .nav-links.nav-right a {
     text-decoration: none;
     color: #123963;
@@ -177,17 +180,23 @@ body {
     font-size: 25px;
 }
 
-#testimonials.content-section {
-    position: relative;
+.testimonial-text {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    justify-content: center; /* Center the items */
+    gap: 20px; /* Space between items */
     margin: 3%;
 }
 
-#testimonials.content-section p {
-    max-width: 500px;
+.testimonial-text p {
+    flex: 1 1 calc(33.33% - 40px); /* Allow up to 3 per row, including gap */
+    max-width: calc(33.33% - 40px); /* Ensure it doesn't exceed 3 per row */
+    font-size: 20px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px; /* Add padding for better spacing */
+    text-align: center;
+    border-radius: 5px; /* Optional rounded corners */
 }
 
 .products {
@@ -308,92 +317,102 @@ body {
 .nav-links.nav-mobile {
     display: none;
     background-color: #fff;
-    position: absolute; /* Allows for flexible positioning */
-    top: 60px; /* Adjust to line up under your navbar */
-    left: 0; /* Change this to left: 0 to align it to the left */
-    width: 200px; /* Adjust as needed */
+    position: absolute;
+    /* Allows for flexible positioning */
+    top: 60px;
+    /* Adjust to line up under your navbar */
+    left: 0;
+    /* Change this to left: 0 to align it to the left */
+    width: 200px;
+    /* Adjust as needed */
     padding: 1rem;
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
     z-index: 9999;
-  }
-  .nav-links.nav-mobile.show {
+}
+
+.nav-links.nav-mobile.show {
     display: block;
     border-radius: 8px;
     box-shadow: none;
     background: #ffffffa8;
-  }
+}
 
 
- /**************************************
+/**************************************
  CONTACT SECTION CARD STYLES
 ***************************************/
 
 /* A wrapper to give a card feel */
 .contact-card {
-    background-color: #fff;            /* Card background */
-    border-radius: 8px;                /* Rounded corners */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    background-color: #fff;
+    /* Card background */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
     padding: 2rem;
-    max-width: 600px;                  /* Limit width for a card look */
-    margin: 0 auto;                    /* Center horizontally */
+    max-width: 600px;
+    /* Limit width for a card look */
+    margin: 0 auto;
+    /* Center horizontally */
     text-align: left;
-  }
-  
-  /* Make the heading stand out */
-  .contact-card h2 {
+}
+
+/* Make the heading stand out */
+.contact-card h2 {
     margin-bottom: 1rem;
     font-weight: 900;
     text-align: center;
-  }
-  
-  /* Spacing under the paragraph in the card */
-  .contact-card p {
+}
+
+/* Spacing under the paragraph in the card */
+.contact-card p {
     margin-bottom: 1.5rem;
     text-align: center;
-  }
-  
-  /* Adjust your form within the card */
-  #contactForm {
+}
+
+/* Adjust your form within the card */
+#contactForm {
     display: block;
     flex-direction: column;
     align-items: left;
     gap: 1.2rem;
-  }
-  
-  /* Keep the label and input grouped nicely */
-  #contactForm .form-group {
+}
+
+/* Keep the label and input grouped nicely */
+#contactForm .form-group {
     display: block;
     margin-top: 20px;
-  }
-  
-  /* Label styling */
-  #contactForm label {
+}
+
+/* Label styling */
+#contactForm label {
     font-weight: 600;
     margin-bottom: 0.4rem;
     font-size: 1rem;
-  }
-  
-  /* Text fields styling (Name, Email, Message) */
-  #contactForm input[type="text"],
-  #contactForm input[type="email"],
-  #contactForm textarea {
+}
+
+/* Text fields styling (Name, Email, Message) */
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
     width: 100%;
     padding: 12px;
     font-size: 1rem;
     border-radius: 5px;
     border: 1px solid #ccc;
     font-family: inherit;
-  }
-  
-  /* Textarea can be resizable vertically */
-  #contactForm textarea {
+}
+
+/* Textarea can be resizable vertically */
+#contactForm textarea {
     resize: vertical;
     font-family: inherit;
     width: 100%;
-  }
-  
-  /* Send button style */
-  #contactForm button {
+}
+
+/* Send button style */
+#contactForm button {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #b3b0b0;
@@ -402,15 +421,15 @@ body {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
-  }
-  
-  #contactForm button:hover {
+}
+
+#contactForm button:hover {
     background-color: #063c11;
     color: #b3b0b0;
-  }
-  
-  /* The thank-you message container, hidden by default. */
-  .thank-you-message {
+}
+
+/* The thank-you message container, hidden by default. */
+.thank-you-message {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -418,26 +437,27 @@ body {
     max-width: 600px;
     margin: 2rem auto 0;
     text-align: center;
-  }
-  
-  .thank-you-message p {
+}
+
+.thank-you-message p {
     font-size: 1.2rem;
     color: #333;
-  }
-  
-  /* Utility class to hide/show elements */
-  .hidden {
-    display: none !important;
-  }
+}
 
-  /* From Uiverse.io by gharsh11032000 */ 
-  .fragrence {
-    flex: 1; /* Allow the fragrence section to expand and push the footer down */
+/* Utility class to hide/show elements */
+.hidden {
+    display: none !important;
+}
+
+/* From Uiverse.io by gharsh11032000 */
+.fragrence {
+    flex: 1;
+    /* Allow the fragrence section to expand and push the footer down */
     background: #e7e7e791;
     background: linear-gradient(180deg, #eeeded78 35%, #ffff 80%);
 }
 
-  .fragrence h1 {
+.fragrence h1 {
     text-align: center;
     margin-right: 2.7%;
     letter-spacing: 3px;
@@ -456,13 +476,16 @@ body {
 
 .collection-container {
     display: flex;
-    flex-wrap: wrap; /* Allow cards to wrap to the next row */
-    gap: 20px; /* Space between cards */
-    justify-content: center; /* Center the cards */
+    flex-wrap: wrap;
+    /* Allow cards to wrap to the next row */
+    gap: 20px;
+    /* Space between cards */
+    justify-content: center;
+    /* Center the cards */
     padding: 20px;
     box-sizing: border-box;
 }
-  
+
 .catalogue-card {
     position: relative;
     width: 300px;
@@ -478,19 +501,19 @@ body {
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     margin: 3%;
 }
-   
-  .catalogue-card svg {
+
+.catalogue-card svg {
     width: 48px;
     fill: #333;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  
-  .catalogue-card:hover {
+}
+
+.catalogue-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-  }
-  
-  .catalogue-card__content {
+}
+
+.catalogue-card__content {
     position: absolute;
     top: 0;
     left: 0;
@@ -504,77 +527,84 @@ body {
     transform: rotateX(-90deg);
     transform-origin: bottom;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  
-  .catalogue-card:hover .catalogue-card__content {
+}
+
+.catalogue-card:hover .catalogue-card__content {
     transform: rotateX(0deg);
-  }
-  
-  .catalogue-card__title {
+}
+
+.catalogue-card__title {
     margin: 0;
     font-size: 24px;
     color: #333;
     font-weight: 700;
-  }
-  
-  .catalogue-card:hover svg {
+}
+
+.catalogue-card:hover svg {
     scale: 0;
-  }
-  
-  .catalogue-card__description {
+}
+
+.catalogue-card__description {
     margin: 10px 0 0;
     font-size: 14px;
     color: #777;
     line-height: 1.4;
-  }
-  
-  .catalogue-card-image {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Optional: Rounded corners */
-    object-fit: cover; /* Ensures image fits within its container */
 }
 
-  @media (max-width: 768px) {
+.catalogue-card-image {
+    width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 10px;
+    /* Optional: Rounded corners */
+    object-fit: cover;
+    /* Ensures image fits within its container */
+}
+
+@media (max-width: 768px) {
 
     .hamburger {
         display: flex;
         /* Show hamburger button */
     }
-  
+
     /* Hide existing left and right nav links */
     .nav-links.nav-left,
     .nav-links.nav-right {
-      display: none !important;
+        display: none !important;
     }
-  
+
     /* Show the mobile nav container */
     .nav-links.nav-mobile {
-      background-color: #fff;
-      position: absolute; /* optional if you want it floating */
-      top: 60px;         /* adjust to line up under your navbar */
-      right: 0;          /* or left: 0; depending on your design */
-      width: 200px;      /* adjust as needed */
-      padding: 1rem;
-      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
-      z-index: 9999;
+        background-color: #fff;
+        position: absolute;
+        /* optional if you want it floating */
+        top: 60px;
+        /* adjust to line up under your navbar */
+        right: 0;
+        /* or left: 0; depending on your design */
+        width: 200px;
+        /* adjust as needed */
+        padding: 1rem;
+        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+        z-index: 9999;
     }
 
     .nav-links.nav-mobile ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
-  
+
     .nav-links.nav-mobile li {
-      margin: 1rem 0;
-      /* If you want each link spaced out */
+        margin: 1rem 0;
+        /* If you want each link spaced out */
     }
-  
+
     .nav-links.nav-mobile a {
-      text-decoration: none;
-      color: #123963;
-      font-weight: 600;
+        text-decoration: none;
+        color: #123963;
+        font-weight: 600;
     }
 
     .subscription-form input {
@@ -589,10 +619,20 @@ body {
         gap: 20px;
         padding: 20px;
         box-sizing: border-box;
-     }
-  }
+    }
+}
 
-  @keyframes slide-in-top {
+/* For mobile: Stack one at a time */
+@media (max-width: 768px) {
+    #testimonials.content-section p {
+        flex: 1 1 100%;
+        /* Full width on smaller screens */
+        max-width: 100%;
+        /* Ensure it doesn't shrink or grow beyond 100% */
+    }
+}
+
+@keyframes slide-in-top {
     0% {
         transform: translateY(-50px);
         opacity: 0;
