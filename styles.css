@@ -478,11 +478,14 @@ body {
 }
 
 .fragrence h1 {
+    font-size: 20px;
     text-align: center;
-    margin-right: 2.7%;
-    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    font-family: Futura, sans-serif;
     color: #123963;
-    padding-top: 3%;
+    letter-spacing: 5px;
+    padding-top: 5%;
 }
 
 .fragrence p {
