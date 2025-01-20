@@ -182,21 +182,28 @@ body {
 
 .testimonial-text {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next row */
-    justify-content: center; /* Center the items */
-    gap: 20px; /* Space between items */
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next row */
+    justify-content: center;
+    /* Center the items */
+    gap: 20px;
+    /* Space between items */
     margin: 3%;
 }
 
 .testimonial-text p {
-    flex: 1 1 calc(33.33% - 40px); /* Allow up to 3 per row, including gap */
-    max-width: calc(33.33% - 40px); /* Ensure it doesn't exceed 3 per row */
+    flex: 1 1 calc(33.33% - 40px);
+    /* Allow up to 3 per row, including gap */
+    max-width: calc(33.33% - 40px);
+    /* Ensure it doesn't exceed 3 per row */
     font-size: 20px;
     box-sizing: border-box;
     margin: 0;
-    padding: 10px; /* Add padding for better spacing */
+    padding: 10px;
+    /* Add padding for better spacing */
     text-align: center;
-    border-radius: 5px; /* Optional rounded corners */
+    border-radius: 5px;
+    /* Optional rounded corners */
 }
 
 .products {
@@ -242,23 +249,30 @@ body {
 
 .footer {
     display: flex;
-    justify-content: space-around; /* Push left and right content to the edges */
-    align-items: center; /* Vertically center items */
-    padding: 1.5rem; /* Add padding around the footer */
-    background-color: #eaf2f4; /* Adjust as needed */
+    justify-content: space-around;
+    /* Push left and right content to the edges */
+    align-items: center;
+    /* Vertically center items */
+    padding: 1.5rem;
+    /* Add padding around the footer */
+    background-color: #eaf2f4;
+    /* Adjust as needed */
 }
 
 .left-footer.footer,
 .right-footer.footer {
-    flex: 0 0 auto; /* Ensure fixed width based on content */
+    flex: 0 0 auto;
+    /* Ensure fixed width based on content */
 }
 
 .left-footer.footer {
-    text-align: left; /* Align content to the left */
+    text-align: left;
+    /* Align content to the left */
 }
 
 .right-footer.footer {
-    text-align: right; /* Align content to the right */
+    text-align: right;
+    /* Align content to the right */
 }
 
 .copyright {
@@ -587,15 +601,26 @@ body {
 /* Styling for the cards container */
 .icon-card-container {
     display: flex;
-    gap: 2rem;
-    overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
-    scroll-snap-type: x mandatory; /* Ensure smooth snapping while swiping */
+    flex-wrap: wrap;
+    /* Ensure items wrap to the next row */
+    justify-content: center;
+    /* Center items within the container */
+    gap: none;
+    /* Add spacing between cards */
     padding: 1rem;
-  }
-  
-  /* Styling for individual cards */
-  .icon-card {
-    flex: 0 0 calc(25% - 1rem); /* Allow up to 4 cards inline, with space */
+    overflow-x: visible;
+    /* Prevent horizontal scrolling */
+}
+
+.icon-card-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Styling for individual cards */
+
+.icon-card {
+    flex: 1 1 calc(25% - 2rem);
+    /* Each card takes 25% width minus gap */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -604,19 +629,22 @@ body {
     border-radius: 8px;
     padding: 1rem;
     background-color: #fff;
-    scroll-snap-align: center; /* Ensure cards snap into view */
-  }
+    max-width: calc(25% - 2rem);
+    /* Ensure it doesn't grow too large */
+    box-sizing: border-box;
+    /* Include padding in width calculations */
+}
 
-  .icon-card h2 {
+.icon-card h2 {
     font-size: 20px;
-  }
-  
-  /* Icon image styling */
-  .icon img {
+}
+
+/* Icon image styling */
+.icon img {
     height: 50px;
     width: 40px;
-  }
-  
+}
+
 
 
 @media (max-width: 768px) {
@@ -692,20 +720,36 @@ body {
     .footer {
         display: flex;
         flex-direction: column;
-        justify-content: center; /* Push left and right content to the edges */
-        align-items: center; /* Vertically center items */ 
+        justify-content: center;
+        /* Push left and right content to the edges */
+        align-items: center;
+        /* Vertically center items */
     }
 
     #right-footer.content-section {
-        padding:30px;
+        padding: 30px;
     }
 }
 
 @media (max-width: 768px) {
-    .icon-card {
-      flex: 0 0 80%; /* Show one card at a time on smaller screens */
+    .icon-card-container {
+        display: flex;
+        gap: 2rem;
+        padding: 1rem;
+        overflow-x: auto;
+        /* Enable horizontal scrolling for smaller screens */
+        scroll-snap-type: x mandatory;
+        /* Ensure smooth snapping while swiping */
     }
-  }
+
+    .icon-card {
+        flex: 0 0 70%;
+        /* Show one card at a time on smaller screens */
+        scroll-snap-align: center;
+        /* Ensure cards snap into view */
+
+    }
+}
 
 @keyframes slide-in-top {
     0% {
