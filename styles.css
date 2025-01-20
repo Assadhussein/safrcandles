@@ -606,6 +606,10 @@ body {
     background-color: #fff;
     scroll-snap-align: center; /* Ensure cards snap into view */
   }
+
+  .icon-card h2 {
+    font-size: 20px;
+  }
   
   /* Icon image styling */
   .icon img {
@@ -702,7 +706,6 @@ body {
       flex: 0 0 80%; /* Show one card at a time on smaller screens */
     }
   }
-  
 
 @keyframes slide-in-top {
     0% {
