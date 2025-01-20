@@ -584,6 +584,37 @@ body {
     /* Ensures image fits within its container */
 }
 
+/* Styling for the cards container */
+.icon-card-container {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
+    scroll-snap-type: x mandatory; /* Ensure smooth snapping while swiping */
+    padding: 1rem;
+  }
+  
+  /* Styling for individual cards */
+  .icon-card {
+    flex: 0 0 calc(25% - 1rem); /* Allow up to 4 cards inline, with space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #fff;
+    scroll-snap-align: center; /* Ensure cards snap into view */
+  }
+  
+  /* Icon image styling */
+  .icon img {
+    height: 50px;
+    width: 40px;
+  }
+  
+
+
 @media (max-width: 768px) {
 
     .hamburger {
@@ -665,6 +696,13 @@ body {
         padding:30px;
     }
 }
+
+@media (max-width: 768px) {
+    .icon-card {
+      flex: 0 0 80%; /* Show one card at a time on smaller screens */
+    }
+  }
+  
 
 @keyframes slide-in-top {
     0% {
