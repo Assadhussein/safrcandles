@@ -601,6 +601,106 @@ body {
     text-align: left; /* Ensure the paragraph aligns with the heading */
 }
 
+/* From Uiverse.io by 3bdel3ziz-T */ 
+.select {
+    width: fit-content;
+    cursor: pointer;
+    position: relative;
+    transition: 300ms;
+    color: black;
+    overflow: hidden;
+  }
+  
+  .selected {
+    background-color: #eaf2f4;
+    padding: 5px;
+    margin-bottom: 3px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 100000;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .arrow {
+    position: relative;
+    right: 0px;
+    height: 10px;
+    transform: rotate(-90deg);
+    width: 25px;
+    fill: white;
+    z-index: 100000;
+    transition: 300ms;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #eaf2f4;
+    position: relative;
+    top: -100px;
+    opacity: 0;
+    transition: 300ms;
+  }
+  
+  .select:hover > .options {
+    opacity: 1;
+    top: 0;
+  }
+  
+  .select:hover > .selected .arrow {
+    transform: rotate(0deg);
+  }
+  
+  .option {
+    border-radius: 5px;
+    padding: 5px;
+    transition: 300ms;
+    background-color: #eaf2f4;
+    width: fit-content;
+    font-size: 15px;
+  }
+  .option:hover {
+    background-color: white;
+  }
+  
+  .options input[type="radio"] {
+    display: none;
+  }
+  
+  .options label {
+    display: inline-block;
+  }
+  .options label::before {
+    content: attr(data-txt);
+  }
+  
+  .options input[type="radio"]:checked + label {
+    display: none;
+  }
+  
+  .options input[type="radio"]#all:checked + label {
+    display: none;
+  }
+  
+  .select:has(.options input[type="radio"]#all:checked) .selected::before {
+    content: attr(data-default);
+  }
+  .select:has(.options input[type="radio"]#option-1:checked) .selected::before {
+    content: attr(data-one);
+  }
+  .select:has(.options input[type="radio"]#option-2:checked) .selected::before {
+    content: attr(data-two);
+  }
+  .select:has(.options input[type="radio"]#option-3:checked) .selected::before {
+    content: attr(data-three);
+  }
+  
+
 @media (max-width: 768px) {
 
     .hamburger {
@@ -692,6 +792,64 @@ body {
         scroll-snap-align: center;
         /* Ensure cards snap into view */
 
+    }
+}
+
+@media (max-width: 768px) {
+    .collection-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the items horizontally */
+        gap: 2rem; /* Add spacing between the sections */
+    }
+
+    .collection-image-section, .collection-text-section {
+        max-width: 100%; /* Allow both sections to take full width */
+    }
+
+    .collection-image-section {
+        order: 1; /* Keep the image section on top */
+        display: flex; /* Ensure flexbox alignment */
+        flex-direction: column; /* Align images in a column */
+        align-items: center; /* Center the content horizontally */
+        justify-content: center; /* Optional: Center the images */
+        width: 100%; /* Allow it to span the full width */
+    }
+
+    .collection-large-image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .collection-large-image img {
+        width: 90%; /* Adjust width for mobile screens */
+        max-width: 400px; /* Prevent it from becoming too large */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 8px;
+    }
+
+    .collection-small-images {
+        display: flex; /* Flexbox for small images */
+        flex-direction: row; /* Align small images horizontally */
+        justify-content: center; /* Center small images horizontally */
+        gap: 1rem; /* Add space between images */
+        flex-wrap: wrap; /* Allow wrapping if needed */
+        margin-top: 1rem; /* Add spacing between large and small images */
+    }
+
+    .collection-small-images img {
+        width: 45%; /* Small images resize for smaller screens */
+        height: auto;
+        border-radius: 8px;
+    }
+
+
+    .collection-text-section {
+        order: 2; /* Ensure the text section is below the image section */
+        text-align: center; /* Optional: Center text for better mobile UX */
+    }
+
+    .collection-text-section h2 {
+        text-align: center; /* Center the heading */
     }
 }
 
