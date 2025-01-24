@@ -543,17 +543,24 @@ body {
 
 /* Parent container for large and small images */
 .collection-image-section {
-    display: flex; /* Ensure inline alignment of large and small image containers */
-    gap: 1rem; /* Add space between the large image and small image container */
-    align-items: flex-start; /* Align the small image container to the top of the large image */
-    justify-content: center; /* Center the entire section horizontally */
-    max-width: 100%; /* Allow the section to span the full width */
-    flex-wrap: nowrap; /* Prevent wrapping so they stay inline */
+    display: flex;
+    /* Ensure inline alignment of large and small image containers */
+    gap: 1rem;
+    /* Add space between the large image and small image container */
+    align-items: flex-start;
+    /* Align the small image container to the top of the large image */
+    justify-content: center;
+    /* Center the entire section horizontally */
+    max-width: 100%;
+    /* Allow the section to span the full width */
+    flex-wrap: nowrap;
+    /* Prevent wrapping so they stay inline */
 }
 
 /* Large image styles */
 .collection-large-image img {
-    width: 400px; /* Adjust size as needed */
+    width: 400px;
+    /* Adjust size as needed */
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -561,15 +568,20 @@ body {
 
 /* Small images container */
 .collection-small-images {
-    display: flex; /* Set as a flex container */
-    flex-direction: column; /* Stack small images vertically */
-    gap: 1rem; /* Add spacing between the small images */
-    justify-content: flex-start; /* Align the small images to the top */
+    display: flex;
+    /* Set as a flex container */
+    flex-direction: column;
+    /* Stack small images vertically */
+    gap: 1rem;
+    /* Add spacing between the small images */
+    justify-content: flex-start;
+    /* Align the small images to the top */
 }
 
 /* Small image styles */
 .collection-small-images img {
-    width: 195px; /* Ensure small images are proportionate */
+    width: 195px;
+    /* Ensure small images are proportionate */
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -578,30 +590,38 @@ body {
 /* Text section styles */
 .collection-text-section {
     max-width: 50%;
-    display: flex; /* Enables flexbox for alignment */
-    flex-direction: column; /* Stacks child elements vertically */
-    justify-content: flex-start; /* Align content to the top */
-    align-items: flex-start; /* Align text to the left */
-    gap: 1rem; /* Optional: Adds spacing between the heading and paragraph */
+    display: flex;
+    /* Enables flexbox for alignment */
+    flex-direction: column;
+    /* Stacks child elements vertically */
+    justify-content: flex-start;
+    /* Align content to the top */
+    align-items: flex-start;
+    /* Align text to the left */
+    gap: 1rem;
+    /* Optional: Adds spacing between the heading and paragraph */
 }
 
 .collection-text-section h2 {
     font-size: 14px;
-    margin: 0; /* Removes any extra spacing */
+    margin: 0;
+    /* Removes any extra spacing */
     font-weight: 300;
     font-family: Futura, sans-serif;
     color: #123963;
     letter-spacing: 5px;
-    text-align: left; /* Ensure the heading aligns with the text */
+    text-align: left;
+    /* Ensure the heading aligns with the text */
 }
 
 .collection-text-section p {
     font-size: 1rem;
     line-height: 1.5;
-    text-align: left; /* Ensure the paragraph aligns with the heading */
+    text-align: left;
+    /* Ensure the paragraph aligns with the heading */
 }
 
-/* From Uiverse.io by 3bdel3ziz-T */ 
+/* From Uiverse.io by 3bdel3ziz-T */
 .select {
     width: fit-content;
     cursor: pointer;
@@ -609,9 +629,9 @@ body {
     transition: 300ms;
     color: black;
     overflow: hidden;
-  }
-  
-  .selected {
+}
+
+.selected {
     background-color: #eaf2f4;
     padding: 5px;
     margin-bottom: 3px;
@@ -622,9 +642,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  
-  .arrow {
+}
+
+.arrow {
     position: relative;
     right: 0px;
     height: 10px;
@@ -633,9 +653,9 @@ body {
     fill: white;
     z-index: 100000;
     transition: 300ms;
-  }
-  
-  .options {
+}
+
+.options {
     display: flex;
     flex-direction: column;
     border-radius: 5px;
@@ -645,61 +665,122 @@ body {
     top: -100px;
     opacity: 0;
     transition: 300ms;
-  }
-  
-  .select:hover > .options {
+}
+
+.select:hover>.options {
     opacity: 1;
     top: 0;
-  }
-  
-  .select:hover > .selected .arrow {
+}
+
+.select:hover>.selected .arrow {
     transform: rotate(0deg);
-  }
-  
-  .option {
+}
+
+.option {
     border-radius: 5px;
     padding: 5px;
     transition: 300ms;
     background-color: #eaf2f4;
     width: fit-content;
     font-size: 15px;
-  }
-  .option:hover {
+}
+
+.option:hover {
     background-color: white;
-  }
-  
-  .options input[type="radio"] {
+}
+
+.options input[type="radio"] {
     display: none;
-  }
-  
-  .options label {
+}
+
+.options label {
     display: inline-block;
-  }
-  .options label::before {
+}
+
+.options label::before {
     content: attr(data-txt);
-  }
-  
-  .options input[type="radio"]:checked + label {
+}
+
+.options input[type="radio"]:checked+label {
     display: none;
-  }
-  
-  .options input[type="radio"]#all:checked + label {
+}
+
+.options input[type="radio"]#all:checked+label {
     display: none;
-  }
-  
-  .select:has(.options input[type="radio"]#all:checked) .selected::before {
+}
+
+.select:has(.options input[type="radio"]#all:checked) .selected::before {
     content: attr(data-default);
-  }
-  .select:has(.options input[type="radio"]#option-1:checked) .selected::before {
+}
+
+.select:has(.options input[type="radio"]#option-1:checked) .selected::before {
     content: attr(data-one);
-  }
-  .select:has(.options input[type="radio"]#option-2:checked) .selected::before {
+}
+
+.select:has(.options input[type="radio"]#option-2:checked) .selected::before {
     content: attr(data-two);
-  }
-  .select:has(.options input[type="radio"]#option-3:checked) .selected::before {
+}
+
+.select:has(.options input[type="radio"]#option-3:checked) .selected::before {
     content: attr(data-three);
-  }
-  
+}
+
+/* Collection Notes Section */
+.collection-notes {
+    display: flex;
+    /* Align items horizontally */
+    justify-content: flex-start;
+    /* Left-align the images */
+    align-items: center;
+    /* Vertically center the section if needed */
+    gap: 2rem;
+    /* Space between each note */
+    margin-top: 1rem;
+    /* Add space above the notes section */
+    width: 100%;
+    /* Span the width of the container */
+    flex-wrap: wrap;
+    /* Allow wrapping if needed */
+}
+
+/* Individual note container */
+.note {
+    display: flex;
+    flex-direction: column;
+    /* Stack image and label vertically */
+    align-items: center;
+    /* Center the label below the image */
+    text-align: center;
+    /* Center the label text */
+    width: 80px;
+    /* Adjust the container width */
+}
+
+/* Round image styles */
+.note img {
+    width: 60px;
+    /* Adjust size as needed */
+    height: 60px;
+    /* Ensure the aspect ratio stays square */
+    border-radius: 50%;
+    /* Make the images round */
+    object-fit: cover;
+    /* Ensure the images fit within the circle */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Optional: Add subtle shadow */
+}
+
+/* Label below the image */
+.note span {
+    margin-top: 0.5rem;
+    /* Add space between the image and the label */
+    font-size: 0.9rem;
+    /* Adjust font size */
+    color: #333;
+    /* Text color */
+    font-family: 'Montserrat', sans-serif;
+    /* Match your site's font style */
+}
 
 @media (max-width: 768px) {
 
@@ -778,41 +859,83 @@ body {
 @media (max-width: 768px) {
     .icon-card-container {
         display: flex;
-        gap: 2rem;
-        padding: 1rem;
+        /* Ensure a single row of cards */
+        flex-wrap: nowrap;
+        /* Prevent wrapping */
         overflow-x: auto;
-        /* Enable horizontal scrolling for smaller screens */
+        /* Allow horizontal scrolling */
+        gap: 1rem;
+        /* Add consistent spacing between cards */
         scroll-snap-type: x mandatory;
-        /* Ensure smooth snapping while swiping */
+        /* Enable snapping for smooth scrolling */
+        scroll-padding: 1rem;
+        /* Add padding for smooth scroll snapping */
+        padding: 1rem;
+        justify-content: flex-start;
+        /* Align the cards to the start */
     }
 
-    .icon-card {
-        flex: 0 0 70%;
-        /* Show one card at a time on smaller screens */
-        scroll-snap-align: center;
-        /* Ensure cards snap into view */
-
+    /* Ensure scrollbar is visible */
+    .icon-card-container::-webkit-scrollbar {
+        height: 6px;
+        /* Adjust the height of the scrollbar */
     }
+
+    .icon-card-container::-webkit-scrollbar-thumb {
+        background-color: #b3b0b0;
+        /* Scrollbar thumb color */
+        border-radius: 4px;
+        /* Rounded scrollbar thumb */
+    }
+
+    .icon-card-container::-webkit-scrollbar-track {
+        background-color: #eaf2f4;
+        /* Scrollbar track color */
+    }
+}
+
+.icon-card {
+    flex: 0 0 100%;
+    /* Ensure each card takes the full width of the viewport */
+    max-width: 100%;
+    /* Prevent cards from shrinking */
+    scroll-snap-align: center;
+    /* Center each card during scrolling */
+    box-sizing: border-box;
+    /* Ensure padding doesn't affect width */
+    margin: 0 auto;
+    /* Center card within its container */
 }
 
 @media (max-width: 768px) {
     .collection-container {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center the items horizontally */
-        gap: 2rem; /* Add spacing between the sections */
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center the items horizontally */
+        gap: 2rem;
+        /* Add spacing between the sections */
     }
 
-    .collection-image-section, .collection-text-section {
-        max-width: 100%; /* Allow both sections to take full width */
+    .collection-image-section,
+    .collection-text-section {
+        max-width: 100%;
+        /* Allow both sections to take full width */
     }
 
     .collection-image-section {
-        order: 1; /* Keep the image section on top */
-        display: flex; /* Ensure flexbox alignment */
-        flex-direction: column; /* Align images in a column */
-        align-items: center; /* Center the content horizontally */
-        justify-content: center; /* Optional: Center the images */
-        width: 100%; /* Allow it to span the full width */
+        order: 1;
+        /* Keep the image section on top */
+        display: flex;
+        /* Ensure flexbox alignment */
+        flex-direction: column;
+        /* Align images in a column */
+        align-items: center;
+        /* Center the content horizontally */
+        justify-content: center;
+        /* Optional: Center the images */
+        width: 100%;
+        /* Allow it to span the full width */
     }
 
     .collection-large-image {
@@ -821,35 +944,48 @@ body {
     }
 
     .collection-large-image img {
-        width: 90%; /* Adjust width for mobile screens */
-        max-width: 400px; /* Prevent it from becoming too large */
-        height: auto; /* Maintain aspect ratio */
+        width: 90%;
+        /* Adjust width for mobile screens */
+        max-width: 400px;
+        /* Prevent it from becoming too large */
+        height: auto;
+        /* Maintain aspect ratio */
         border-radius: 8px;
     }
 
     .collection-small-images {
-        display: flex; /* Flexbox for small images */
-        flex-direction: row; /* Align small images horizontally */
-        justify-content: center; /* Center small images horizontally */
-        gap: 1rem; /* Add space between images */
-        flex-wrap: wrap; /* Allow wrapping if needed */
-        margin-top: 1rem; /* Add spacing between large and small images */
+        display: flex;
+        /* Flexbox for small images */
+        flex-direction: row;
+        /* Align small images horizontally */
+        justify-content: center;
+        /* Center small images horizontally */
+        gap: 1rem;
+        /* Add space between images */
+        flex-wrap: wrap;
+        /* Allow wrapping if needed */
+        margin-top: 1rem;
+        /* Add spacing between large and small images */
     }
 
     .collection-small-images img {
-        width: 45%; /* Small images resize for smaller screens */
+        width: 45%;
+        /* Small images resize for smaller screens */
         height: auto;
         border-radius: 8px;
     }
 
 
     .collection-text-section {
-        order: 2; /* Ensure the text section is below the image section */
-        text-align: center; /* Optional: Center text for better mobile UX */
+        order: 2;
+        /* Ensure the text section is below the image section */
+        text-align: center;
+        /* Optional: Center text for better mobile UX */
     }
 
     .collection-text-section h2 {
-        text-align: center; /* Center the heading */
+        text-align: center;
+        /* Center the heading */
     }
 }
 
