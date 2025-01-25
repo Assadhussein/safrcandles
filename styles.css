@@ -893,19 +893,19 @@ body {
         background-color: #eaf2f4;
         /* Scrollbar track color */
     }
-}
 
-.icon-card {
-    flex: 0 0 100%;
-    /* Ensure each card takes the full width of the viewport */
-    max-width: 100%;
-    /* Prevent cards from shrinking */
-    scroll-snap-align: center;
-    /* Center each card during scrolling */
-    box-sizing: border-box;
-    /* Ensure padding doesn't affect width */
-    margin: 0 auto;
-    /* Center card within its container */
+    .icon-card {
+        flex: 0 0 100%;
+        /* Ensure each card takes the full width of the viewport */
+        max-width: 100%;
+        /* Prevent cards from shrinking */
+        scroll-snap-align: center;
+        /* Center each card during scrolling */
+        box-sizing: border-box;
+        /* Ensure padding doesn't affect width */
+        margin: 0 auto;
+        /* Center card within its container */
+    }
 }
 
 @media (max-width: 768px) {
