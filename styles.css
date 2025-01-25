@@ -650,7 +650,7 @@ body {
     height: 10px;
     transform: rotate(-90deg);
     width: 25px;
-    fill: white;
+    fill: black;
     z-index: 100000;
     transition: 300ms;
 }
@@ -729,7 +729,7 @@ body {
 .collection-notes {
     display: flex;
     /* Align items horizontally */
-    justify-content: flex-start;
+    justify-content: center;
     /* Left-align the images */
     align-items: center;
     /* Vertically center the section if needed */
@@ -737,10 +737,8 @@ body {
     /* Space between each note */
     margin-top: 1rem;
     /* Add space above the notes section */
-    width: 100%;
+    width: 90%;
     /* Span the width of the container */
-    flex-wrap: wrap;
-    /* Allow wrapping if needed */
 }
 
 /* Individual note container */
@@ -756,6 +754,9 @@ body {
     /* Adjust the container width */
 }
 
+.note :hover {
+    transform: translateY(-5px);
+}
 /* Round image styles */
 .note img {
     width: 60px;
@@ -987,6 +988,34 @@ body {
     .collection-text-section h2 {
         text-align: center;
         /* Center the heading */
+    }
+
+    .collection-notes {
+        display: flex;
+        /* Align items horizontally */
+        justify-content: flex-start;
+        /* Left-align the images */
+        align-items: center;
+        /* Vertically center the section if needed */
+        gap: 1rem;
+        /* Space between each note */
+        margin-top: 1rem;
+        /* Add space above the notes section */
+        width: 100%;
+        /* Span the width of the container */
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        scroll-snap-type: x mandatory;
+        
+
+    }
+
+    .note {
+        flex: 0 0 30%;
+        max-width: 100%;
+        scroll-snap-align: center;
+        box-sizing: border-box;
+        margin: 0 auto;
     }
 }
 
