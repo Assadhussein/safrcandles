@@ -878,6 +878,7 @@ body {
     /* Ensure scrollbar is visible */
     .icon-card-container::-webkit-scrollbar {
         height: 6px;
+        display: block;
         /* Adjust the height of the scrollbar */
     }
 
