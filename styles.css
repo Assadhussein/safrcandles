@@ -602,15 +602,16 @@ body {
     /* Optional: Adds spacing between the heading and paragraph */
 }
 
-.collection-text-section h2 {
+.collection-headers h2 {
     font-size: 14px;
     margin: 0;
     /* Removes any extra spacing */
     font-weight: 300;
+    padding-top: 3rem;
     font-family: Futura, sans-serif;
     color: #123963;
     letter-spacing: 5px;
-    text-align: left;
+    text-align: center;
     /* Ensure the heading aligns with the text */
 }
 
@@ -621,115 +622,11 @@ body {
     /* Ensure the paragraph aligns with the heading */
 }
 
-/* From Uiverse.io by 3bdel3ziz-T */
-.select {
-    width: fit-content;
-    cursor: pointer;
-    position: relative;
-    transition: 300ms;
-    color: black;
-    overflow: hidden;
-}
-
-.selected {
-    background-color: #eaf2f4;
-    padding: 5px;
-    margin-bottom: 3px;
-    border-radius: 5px;
-    position: relative;
-    z-index: 100000;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.arrow {
-    position: relative;
-    right: 0px;
-    height: 10px;
-    transform: rotate(-90deg);
-    width: 25px;
-    fill: black;
-    z-index: 100000;
-    transition: 300ms;
-}
-
-.options {
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    padding: 5px;
-    background-color: #eaf2f4;
-    position: relative;
-    top: -100px;
-    opacity: 0;
-    transition: 300ms;
-}
-
-.select:hover>.options {
-    opacity: 1;
-    top: 0;
-}
-
-.select:hover>.selected .arrow {
-    transform: rotate(0deg);
-}
-
-.option {
-    border-radius: 5px;
-    padding: 5px;
-    transition: 300ms;
-    background-color: #eaf2f4;
-    width: fit-content;
-    font-size: 15px;
-}
-
-.option:hover {
-    background-color: white;
-}
-
-.options input[type="radio"] {
-    display: none;
-}
-
-.options label {
-    display: inline-block;
-}
-
-.options label::before {
-    content: attr(data-txt);
-}
-
-.options input[type="radio"]:checked+label {
-    display: none;
-}
-
-.options input[type="radio"]#all:checked+label {
-    display: none;
-}
-
-.select:has(.options input[type="radio"]#all:checked) .selected::before {
-    content: attr(data-default);
-}
-
-.select:has(.options input[type="radio"]#option-1:checked) .selected::before {
-    content: attr(data-one);
-}
-
-.select:has(.options input[type="radio"]#option-2:checked) .selected::before {
-    content: attr(data-two);
-}
-
-.select:has(.options input[type="radio"]#option-3:checked) .selected::before {
-    content: attr(data-three);
-}
-
 /* Collection Notes Section */
 .collection-notes {
     display: flex;
     /* Align items horizontally */
-    justify-content: center;
+    justify-content: left;
     /* Left-align the images */
     align-items: center;
     /* Vertically center the section if needed */
@@ -781,6 +678,34 @@ body {
     /* Text color */
     font-family: 'Montserrat', sans-serif;
     /* Match your site's font style */
+}
+
+#collection-section.section {
+    display: flex;
+}
+
+.price-container {
+    justify-content: center;
+    justify-items: center;
+}
+
+.price-container li:hover {
+    transform: translateY(-1px);
+}
+
+.price-container button:hover {
+    transform: translateY(-1px);
+}
+
+.price-container button {
+    padding: 10px 10px;
+    font-size: 14px;
+    font-family: Butler sans-serif;
+    background-color: #eaf2f4;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
