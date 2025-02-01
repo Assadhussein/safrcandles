@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycby19IqijkMMz55nl_7_TLgTC7dsOYUm4dw2wOw9ydzMoJoSDDW7BdS6_cxFGFgKS2HJ/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwfKdCGGKvHsuRjk8wJDRukx6HbffYvH6uZg-D6LXpdhTdGvdfr2x-UttaewrLIKs0F/exec';
     const API_URL = 'https://script.google.com/macros/s/AKfycbwis5zZ9jl5B9aeM7n6I2eWZp3wMgHQ7sohZObSDrFWipk915rWEhu01Igl5Drbe2vc/exec';
     
     // Smooth Scrolling
