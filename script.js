@@ -88,3 +88,15 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const mobileCollectionMenu = document.querySelector(".mobile-collection-menu");
+    const mobileDropdownMenu = document.querySelector(".mobile-dropdown-menu");
+
+    if (mobileCollectionMenu && mobileDropdownMenu) {
+        mobileCollectionMenu.addEventListener("click", (event) => {
+            event.preventDefault(); // Prevent default link behavior
+            mobileDropdownMenu.classList.toggle("show"); // Toggle dropdown visibility
+        });
+    }
+});

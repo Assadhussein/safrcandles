@@ -374,6 +374,77 @@ body {
     background: #ffffffa8;
 }
 
+/* Dropdown menu styling */
+.nav-right {
+    position: relative;
+}
+
+.collection-menu {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Align below the button */
+    left: 0;
+    background-color: #eaf2f4;
+    border: 1px solid #eaf2f4;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    list-style: none;
+    min-width: 150px;
+    z-index: 10;
+}
+
+.dropdown-menu li {
+    padding: 8px 15px;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f4f4f4;
+}
+
+/* Show the dropdown only when hovering over the Collection link */
+.collection-menu:hover + .dropdown-menu,
+.dropdown-menu:hover {
+    display: block;
+}
+
+/* Mobile Dropdown Styling */
+.mobile-dropdown-menu {
+    display: none; /* Hidden by default */
+    list-style: none;
+    padding-left: 15px; /* Indent for submenu */
+    background-color: #ffffff; /* Ensure visibility */
+    border-left: 2px solid #eaf2f4; /* Subtle left border */
+}
+
+.mobile-dropdown-menu li {
+    padding: 8px 10px;
+}
+
+.mobile-dropdown-menu a {
+    text-decoration: none;
+    color: #123963;
+    font-weight: 500;
+}
+
+.mobile-dropdown-menu a:hover {
+    color: #b3b0b0;
+}
+
+/* Show dropdown when active */
+.mobile-dropdown-menu.show {
+    display: block;
+}
 
 /**************************************
  CONTACT SECTION CARD STYLES
