@@ -142,8 +142,10 @@ body {
 }
 
 #services.content-section {
-    padding: 70px;
+    margin: auto;
+    padding: auto;
     background-color: #eaf2f4;
+    align-content: center;
 }
 
 #socials.content-section {
@@ -207,8 +209,9 @@ body {
 }
 
 .products {
-    width: 270px;
-    height: 310px;
+    height: auto;
+    width: 350px;
+    object-fit: contain;
     padding: 10px;
     display: inline-flexbox;
     text-align: center;
