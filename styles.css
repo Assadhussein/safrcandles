@@ -353,7 +353,7 @@ body {
 /* 1) Hide the mobile nav container by default */
 .nav-links.nav-mobile {
     display: none;
-    background-color: #fff;
+    background: #ffffffa8;
     position: absolute;
     /* Allows for flexible positioning */
     top: 60px;
@@ -423,8 +423,7 @@ body {
     display: none; /* Hidden by default */
     list-style: none;
     padding-left: 15px; /* Indent for submenu */
-    background-color: #ffffff; /* Ensure visibility */
-    border-left: 2px solid #eaf2f4; /* Subtle left border */
+    background: #ffffffa8; /* Ensure visibility */
 }
 
 .mobile-dropdown-menu li {
@@ -444,6 +443,7 @@ body {
 /* Show dropdown when active */
 .mobile-dropdown-menu.show {
     display: block;
+    background: #eaf2f45e;;
 }
 
 /**************************************
