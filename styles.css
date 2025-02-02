@@ -636,8 +636,6 @@ body {
     width: 400px;
     /* Adjust size as needed */
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Small images container */
@@ -657,8 +655,6 @@ body {
     width: 195px;
     /* Ensure small images are proportionate */
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Text section styles */
@@ -950,8 +946,6 @@ body {
         max-width: 400px;
         /* Prevent it from becoming too large */
         height: auto;
-        /* Maintain aspect ratio */
-        border-radius: 8px;
     }
 
     .collection-small-images {
@@ -973,7 +967,6 @@ body {
         width: 45%;
         /* Small images resize for smaller screens */
         height: auto;
-        border-radius: 8px;
     }
 
 
