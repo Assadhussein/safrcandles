@@ -94,153 +94,640 @@
             </div>
         </nav>
 
-        <section id="nanikaghar" class="collection-headers">
-            <h2>NANI KA GHAR</h2>
-            <div class="collection-container">
+        <section id="nanikaghar" class="collection-container">
+            <div id='product-component-1740345971211'></div>
+            <script type="text/javascript">
+                /*<![CDATA[*/
+                (function () {
+                    var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+                    if (window.ShopifyBuy) {
+                        if (window.ShopifyBuy.UI) {
+                            ShopifyBuyInit();
+                        } else {
+                            loadScript();
+                        }
+                    } else {
+                        loadScript();
+                    }
+                    function loadScript() {
+                        var script = document.createElement('script');
+                        script.async = true;
+                        script.src = scriptURL;
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+                        script.onload = ShopifyBuyInit;
+                    }
+                    function ShopifyBuyInit() {
+                        var client = ShopifyBuy.buildClient({
+                            domain: 'yys9b1-vb.myshopify.com',
+                            storefrontAccessToken: '63468f43316e6fa76a8d7242284f8355',
+                        });
+                        ShopifyBuy.UI.onReady(client).then(function (ui) {
+                            ui.createComponent('product', {
+                                id: '8959633785076',
+                                node: document.getElementById('product-component-1740345971211'),
+                                moneyFormat: '%24%7B%7Bamount%7D%7D',
+                                options: {
+                                    "product": {
+                                        "styles": {
+                                            "product": {
+                                                "@media (min-width: 601px)": {
+                                                    "max-width": "100%",
+                                                    "margin-left": "0",
+                                                    "margin-bottom": "50px"
+                                                },
+                                                "text-align": "left"
+                                            },
+                                            "title": {
+                                                "font-size": "26px"
+                                            },
+                                            "button": {
+                                                "font-family": "Geneva, sans-serif",
+                                                "color": "#000000",
+                                                ":hover": {
+                                                    "color": "#000000",
+                                                    "background-color": "#d3dadc"
+                                                },
+                                                "background-color": "#eaf2f4",
+                                                ":focus": {
+                                                    "background-color": "#d3dadc"
+                                                },
+                                                "border-radius": "8px"
+                                            },
+                                            "price": {
+                                                "font-size": "18px"
+                                            },
+                                            "compareAt": {
+                                                "font-size": "15.299999999999999px"
+                                            },
+                                            "unitPrice": {
+                                                "font-size": "15.299999999999999px"
+                                            }
+                                        },
+                                        "layout": "horizontal",
+                                        "contents": {
+                                            "img": false,
+                                            "imgWithCarousel": true,
+                                            "description": true
+                                        },
+                                        "width": "100%",
+                                        "text": {
+                                            "button": "Add to cart"
+                                        },
+                                        "variantId": "all"
+                                    },
+                                    "productSet": {
+                                        "styles": {
+                                            "products": {
+                                                "@media (min-width: 601px)": {
+                                                    "margin-left": "-20px"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "modalProduct": {
+                                        "contents": {
+                                            "img": false,
+                                            "imgWithCarousel": true,
+                                            "button": false,
+                                            "buttonWithQuantity": true
+                                        },
+                                        "styles": {
+                                            "product": {
+                                                "@media (min-width: 601px)": {
+                                                    "max-width": "100%",
+                                                    "margin-left": "0px",
+                                                    "margin-bottom": "0px"
+                                                }
+                                            },
+                                            "button": {
+                                                "font-family": "Geneva, sans-serif",
+                                                "color": "#000000",
+                                                ":hover": {
+                                                    "color": "#000000",
+                                                    "background-color": "#d3dadc"
+                                                },
+                                                "background-color": "#eaf2f4",
+                                                ":focus": {
+                                                    "background-color": "#d3dadc"
+                                                },
+                                                "border-radius": "8px"
+                                            },
+                                            "title": {
+                                                "font-family": "Helvetica Neue, sans-serif",
+                                                "font-weight": "bold",
+                                                "font-size": "26px",
+                                                "color": "#4c4c4c"
+                                            },
+                                            "price": {
+                                                "font-family": "Helvetica Neue, sans-serif",
+                                                "font-weight": "normal",
+                                                "font-size": "18px",
+                                                "color": "#4c4c4c"
+                                            },
+                                            "compareAt": {
+                                                "font-family": "Helvetica Neue, sans-serif",
+                                                "font-weight": "normal",
+                                                "font-size": "15.299999999999999px",
+                                                "color": "#4c4c4c"
+                                            },
+                                            "unitPrice": {
+                                                "font-family": "Helvetica Neue, sans-serif",
+                                                "font-weight": "normal",
+                                                "font-size": "15.299999999999999px",
+                                                "color": "#4c4c4c"
+                                            }
+                                        },
+                                        "text": {
+                                            "button": "Add to cart"
+                                        }
+                                    },
+                                    "option": {},
+                                    "cart": {
+                                        "styles": {
+                                            "button": {
+                                                "font-family": "Geneva, sans-serif",
+                                                "color": "#000000",
+                                                ":hover": {
+                                                    "color": "#000000",
+                                                    "background-color": "#d3dadc"
+                                                },
+                                                "background-color": "#eaf2f4",
+                                                ":focus": {
+                                                    "background-color": "#d3dadc"
+                                                },
+                                                "border-radius": "8px"
+                                            }
+                                        },
+                                        "text": {
+                                            "total": "Subtotal",
+                                            "button": "Checkout"
+                                        },
+                                        "popup": false
+                                    },
+                                    "toggle": {
+                                        "styles": {
+                                            "toggle": {
+                                                "font-family": "Geneva, sans-serif",
+                                                "background-color": "#eaf2f4",
+                                                ":hover": {
+                                                    "background-color": "#d3dadc"
+                                                },
+                                                ":focus": {
+                                                    "background-color": "#d3dadc"
+                                                }
+                                            },
+                                            "count": {
+                                                "color": "#000000",
+                                                ":hover": {
+                                                    "color": "#000000"
+                                                }
+                                            },
+                                            "iconPath": {
+                                                "fill": "#000000"
+                                            }
+                                        }
+                                    }
+                                },
+                            });
+                        });
+                    }
+                })();
+                /*]]>*/
+            </script>
 
-                <div class="collection-image-section">
-
-                    <div class="collection-large-image">
-                        <img src="media/nkg7oz.jpg" alt="Nani ka Ghar Soy Wax candle 7oz">
-                    </div>
-                    <div class="collection-small-images">
-                        <img src="media/nkg3oz.jpg" alt="Nani ka Ghar soy wax candle 3oz">
-                        <img src="media/nkgWaxMelt.jpg" alt="Nani ka Ghar soy wax Wax Melt 20z">
-                    </div>
+            <div class="collection-notes">
+                <div class="note">
+                    <img src="media/Rose.png" alt="Rose">
+                    <span>Rose</span>
                 </div>
-
-                <div class="collection-text-section">
-                    <p>
-                        A soft breeze drifts through an open window, carrying whiffs of coconut and bergamot. The gentle
-                        hum
-                        of a ceiling fan stirs the air, mingling with the aroma of blooming peonies and the sweetness of
-                        tonka, like the comforting atmosphere of a well-loved home.
-                        <br><br>
-                        Creamy sandalwood and rich vanilla anchor the fragrance, bringing back memories of polished
-                        wooden
-                        furniture that has stood the test of time. Fresh jasmine and rose come together, bringing to
-                        mind
-                        the garlands worn around hands during cherished traditions.
-                        <br><br>
-                        This is not just a fragrance; it is an ode to a place where time slows down, where love was
-                        served
-                        in small cups of chai, and every corner held the story of a life lived fully.
-                        <br><br>
-                        Nani Ka Ghar is a journey back to where it all began: comforting, feminine, and fresh.
-                    </p>
-
-                    <!-- From Uiverse.io by 3bdel3ziz-T -->
-
-                    <div class="collection-notes">
-                        <div class="note">
-                            <img src="media/Rose.png" alt="Rose">
-                            <span>Rose</span>
-                        </div>
-                        <div class="note">
-                            <img src="media/Jasmine.png" alt="Jasmine">
-                            <span>Jasmine</span>
-                        </div>
-                        <div class="note">
-                            <img src="media/Bergamot.png" alt="Bergamot">
-                            <span>Bergamot</span>
-                        </div>
-                        <div class="note">
-                            <img src="media/Sandalwood.png" alt="Sandalwood">
-                            <span>Sandalwood</span>
-                        </div>
-                    </div>
-                    <div class="price-container">
-                        <a href="wholesale.html"><button>Contact us now to place an order</button></a>
-                        <br><br>
-                        <ul style="list-style-type: circle;">
-                            <li><em>7oz Candle - CAD $23.99</em></li>
-                            <li><em>3oz Candle - CAD $13.00</em></li>
-                            <li><em>2oz Wax Melt - CAD $7.99</em></li>
-                        </ul>
-                    </div>
+                <div class="note">
+                    <img src="media/Jasmine.png" alt="Jasmine">
+                    <span>Jasmine</span>
                 </div>
+                <div class="note">
+                    <img src="media/Bergamot.png" alt="Bergamot">
+                    <span>Bergamot</span>
+                </div>
+                <div class="note">
+                    <img src="media/Sandalwood.png" alt="Sandalwood">
+                    <span>Sandalwood</span>
+                </div>
+            </div>
+
         </section>
 
-        <section id="kitab" class="collection-headers">
-            <h2>KITAB</h2>
-            <div class="collection-container">
-                <div class="collection-image-section">
+        <section id="kitab" class="collection-container">
+            <div id='product-component-1740367326749'></div>
+            <script type="text/javascript">
+                /*<![CDATA[*/
+                (function () {
+                    var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+                    if (window.ShopifyBuy) {
+                        if (window.ShopifyBuy.UI) {
+                            ShopifyBuyInit();
+                        } else {
+                            loadScript();
+                        }
+                    } else {
+                        loadScript();
+                    }
+                    function loadScript() {
+                        var script = document.createElement('script');
+                        script.async = true;
+                        script.src = scriptURL;
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+                        script.onload = ShopifyBuyInit;
+                    }
+                    function ShopifyBuyInit() {
+                        var client = ShopifyBuy.buildClient({
+                            domain: 'yys9b1-vb.myshopify.com',
+                            storefrontAccessToken: '63468f43316e6fa76a8d7242284f8355',
+                        });
+                        ShopifyBuy.UI.onReady(client).then(function (ui) {
+                            ui.createComponent('product', {
+                                id: '8966931906804',
+                                node: document.getElementById('product-component-1740367326749'),
+                                moneyFormat: '%24%7B%7Bamount%7D%7D',
+                                options: {
+                                    "product": {
+                                        "styles": {
+                                            "product": {
+                                                "@media (min-width: 601px)": {
+                                                    "max-width": "100%",
+                                                    "margin-left": "0",
+                                                    "margin-bottom": "50px"
+                                                },
+                                                "text-align": "left"
+                                            },
+                                            "title": {
+                                                "font-size": "26px"
+                                            },
+                                            "button": {
+                                                "font-family": "Geneva, sans-serif",
+                                                "color": "#000000",
+                                                ":hover": {
+                                                    "color": "#000000",
+                                                    "background-color": "#d3dadc"
+                                                },
+                                                "background-color": "#eaf2f4",
+                                                ":focus": {
+                                                    "background-color": "#d3dadc"
+                                                },
+                                                "border-radius": "8px"
+                                            },
+                                            "price": {
+                                                "font-size": "18px"
+                                            },
+                                            "compareAt": {
+                                                "font-size": "15.299999999999999px"
+                                            },
+                                            "unitPrice": {
+                                                "font-size": "15.299999999999999px"
+                                            }
+                                        },
+                                        "layout": "horizontal",
+                                        "contents": {
+                                            "img": false,
+                                            "imgWithCarousel": true,
+                                            "description": true
+                                        },
+                                        "width": "100%",
+                                        "text": {
+                                            "button": "Add to cart"
+                                        },
+                                        "variantId": "all"
+                                    },
+                                    "productSet": {
+                                        "styles": {
+                                            "products": {
+                                                "@media (min-width: 601px)": {
+                                                    "margin-left": "-20px"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "modalProduct": {
+                                        "contents": {
+                                            "img": false,
+                                            "imgWithCarousel": true,
+                                            "button": false,
+                                            "buttonWithQuantity": true
+                                        },
+                                        "styles": {
+                                            "product": {
+                                                "@media (min-width: 601px)": {
+                                                    "max-width": "100%",
+                                                    "margin-left": "0px",
+                                                    "margin-bottom": "0px"
+                                                }
+                                            },
+                                            "button": {
+                                                "font-family": "Geneva, sans-serif",
+                                                "color": "#000000",
+                                                ":hover": {
+                                                    "color": "#000000",
+                                                    "background-color": "#d3dadc"
+                                                },
+                                                "background-color": "#eaf2f4",
+                                                ":focus": {
+                                                    "background-color": "#d3dadc"
+                                                },
+                                                "border-radius": "8px"
+                                            },
+                                            "title": {
+                                                "font-family": "Helvetica Neue, sans-serif",
+                                                "font-weight": "bold",
+                                                "font-size": "26px",
+                                                "color": "#4c4c4c"
+                                            },
+                                            "price": {
+                                                "font-family": "Helvetica Neue, sans-serif",
+                                                "font-weight": "normal",
+                                                "font-size": "18px",
+                                                "color": "#4c4c4c"
+                                            },
+                                            "compareAt": {
+                                                "font-family": "Helvetica Neue, sans-serif",
+                                                "font-weight": "normal",
+                                                "font-size": "15.299999999999999px",
+                                                "color": "#4c4c4c"
+                                            },
+                                            "unitPrice": {
+                                                "font-family": "Helvetica Neue, sans-serif",
+                                                "font-weight": "normal",
+                                                "font-size": "15.299999999999999px",
+                                                "color": "#4c4c4c"
+                                            }
+                                        },
+                                        "text": {
+                                            "button": "Add to cart"
+                                        }
+                                    },
+                                    "option": {},
+                                    "cart": {
+                                        "styles": {
+                                            "button": {
+                                                "font-family": "Geneva, sans-serif",
+                                                "color": "#000000",
+                                                ":hover": {
+                                                    "color": "#000000",
+                                                    "background-color": "#d3dadc"
+                                                },
+                                                "background-color": "#eaf2f4",
+                                                ":focus": {
+                                                    "background-color": "#d3dadc"
+                                                },
+                                                "border-radius": "8px"
+                                            }
+                                        },
+                                        "text": {
+                                            "total": "Subtotal",
+                                            "button": "Checkout"
+                                        },
+                                        "popup": false
+                                    },
+                                    "toggle": {
+                                        "styles": {
+                                            "toggle": {
+                                                "font-family": "Geneva, sans-serif",
+                                                "background-color": "#eaf2f4",
+                                                ":hover": {
+                                                    "background-color": "#d3dadc"
+                                                },
+                                                ":focus": {
+                                                    "background-color": "#d3dadc"
+                                                }
+                                            },
+                                            "count": {
+                                                "color": "#000000",
+                                                ":hover": {
+                                                    "color": "#000000"
+                                                }
+                                            },
+                                            "iconPath": {
+                                                "fill": "#000000"
+                                            }
+                                        }
+                                    }
+                                },
+                            });
+                        });
+                    }
+                })();
+                /*]]>*/
+            </script>
 
-                    <div class="collection-large-image">
-                        <img src="media/kitab7oz.jpg" alt="Kitab soy wax candle 7oz library books paper">
-                    </div>
-                    <div class="collection-small-images">
-                        <img src="media/kitab3oz.jpg" alt="Kitab soy wax candle 3oz library books paper">
-                        <img src="media/kitabWaxMelt.jpg" alt="Kitab soy wax wax melt 2oz library books paper">
-                    </div>
+            <div class="collection-notes">
+                <div class="note">
+                    <img src="media/Leather.png" alt="Leather">
+                    <span>Leather</span>
                 </div>
-
-                <div class="collection-text-section">
-                    <p>
-                        Step into the quiet of an old haveli library, where the air smells of worn books and teakwood
-                        shelves. The sweetness of peach and plum drifts like sunlight filtering through ornate jali
-                        windows, mingling with the delicate notes of peony and violet.
-                        <br><br>
-                        As the fragrance deepens, the warm aroma of leather and patchouli emerges. Vanilla and musk
-                        linger softly like the whispering of stories shared over dimly lit lanterns.
-                        <br><br>
-                        Kitab is a celebration of the beauty in age, the stories etched into the leather of bindings,
-                        and the quiet allure of discovery in a world where tradition and imagination meet.
-                    </p>
-
-                    <!-- From Uiverse.io by 3bdel3ziz-T -->
-
-                    <div class="collection-notes">
-                        <div class="note">
-                            <img src="media/Leather.png" alt="Leather">
-                            <span>Leather</span>
-                        </div>
-                        <div class="note">
-                            <img src="media/Patchouli.png" alt="Patchouli">
-                            <span>Patchouli</span>
-                        </div>
-                    </div>
-                    <div class="price-container">
-                        <a href="wholesale.html"><button>Contact us now to place an order</button></a>
-                        <br><br>
-                        <ul style="list-style-type: circle;">
-                            <li><em>7oz Candle - CAD $23.99</em></li>
-                            <li><em>3oz Candle - CAD $13.00</em></li>
-                            <li><em>2oz Wax Melt - CAD $7.99</em></li>
-                        </ul>
-                    </div>
+                <div class="note">
+                    <img src="media/Patchouli.png" alt="Patchouli">
+                    <span>Patchouli</span>
+                </div>
+            </div>
         </section>
 
-        <section id="barish" class="collection-headers">
-            <h2>BARISH</h2>
-            <div class="collection-container">
-                <div class="collection-image-section">
-
-                    <div class="collection-large-image">
-                        <img src="media/barish7oz.jpeg" alt="Barish 7oz ounce candle smells like rain">
-                    </div>
-                    <div class="collection-small-images">
-                        <img src="media/barish3oz.jpeg" alt="Barish 3oz ounce candle smells like rain">
-                        <img src="media/barishWaxMelt.jpeg" alt="Barish 2oz ounce wax melt smells like rain">
-                    </div>
-                </div>
-
-                <div class="collection-text-section">
-                    <p>
-                        The monsoon arrives, and with it comes the intoxicating scent of mitti—the rain-soaked earth.
-                        Baarish opens with fresh, cooling notes of green florals and cucumber, capturing the relief of
-                        the first raindrops after a hot day.
-                        <br><br>
-                        The fragrance deepens to the aroma of damp soil rises and mingles with white florals and the
-                        golden warmth of amber, like scattered flower petals caught in the downpour. The base of
-                        patchouli and moss mix with sandalwood and dark musk for a thunderous finish.
-                        <br><br>
-                        Barish is a tribute to the monsoon season, where the scent of earth, rain, and blooms come alive
-                        in a moment of pure harmony.
-                    </p>
-
-                    <!-- From Uiverse.io by 3bdel3ziz-T -->
-
+        <section id="barish" class="collection-container">
+            <div id='product-component-1740367619219'></div>
+            <script type="text/javascript">
+            /*<![CDATA[*/
+            (function () {
+              var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+              if (window.ShopifyBuy) {
+                if (window.ShopifyBuy.UI) {
+                  ShopifyBuyInit();
+                } else {
+                  loadScript();
+                }
+              } else {
+                loadScript();
+              }
+              function loadScript() {
+                var script = document.createElement('script');
+                script.async = true;
+                script.src = scriptURL;
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+                script.onload = ShopifyBuyInit;
+              }
+              function ShopifyBuyInit() {
+                var client = ShopifyBuy.buildClient({
+                  domain: 'yys9b1-vb.myshopify.com',
+                  storefrontAccessToken: '63468f43316e6fa76a8d7242284f8355',
+                });
+                ShopifyBuy.UI.onReady(client).then(function (ui) {
+                  ui.createComponent('product', {
+                    id: '8966930366708',
+                    node: document.getElementById('product-component-1740367619219'),
+                    moneyFormat: '%24%7B%7Bamount%7D%7D',
+                    options: {
+              "product": {
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "100%",
+                      "margin-left": "0",
+                      "margin-bottom": "50px"
+                    },
+                    "text-align": "left"
+                  },
+                  "title": {
+                    "font-size": "26px"
+                  },
+                  "button": {
+                    "font-family": "Geneva, sans-serif",
+                    "color": "#000000",
+                    ":hover": {
+                      "color": "#000000",
+                      "background-color": "#d3dadc"
+                    },
+                    "background-color": "#eaf2f4",
+                    ":focus": {
+                      "background-color": "#d3dadc"
+                    },
+                    "border-radius": "8px"
+                  },
+                  "price": {
+                    "font-size": "18px"
+                  },
+                  "compareAt": {
+                    "font-size": "15.299999999999999px"
+                  },
+                  "unitPrice": {
+                    "font-size": "15.299999999999999px"
+                  }
+                },
+                "layout": "horizontal",
+                "contents": {
+                  "img": false,
+                  "imgWithCarousel": true,
+                  "description": true
+                },
+                "width": "100%",
+                "text": {
+                  "button": "Add to cart"
+                }
+              },
+              "productSet": {
+                "styles": {
+                  "products": {
+                    "@media (min-width: 601px)": {
+                      "margin-left": "-20px"
+                    }
+                  }
+                }
+              },
+              "modalProduct": {
+                "contents": {
+                  "img": false,
+                  "imgWithCarousel": true,
+                  "button": false,
+                  "buttonWithQuantity": true
+                },
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "100%",
+                      "margin-left": "0px",
+                      "margin-bottom": "0px"
+                    }
+                  },
+                  "button": {
+                    "font-family": "Geneva, sans-serif",
+                    "color": "#000000",
+                    ":hover": {
+                      "color": "#000000",
+                      "background-color": "#d3dadc"
+                    },
+                    "background-color": "#eaf2f4",
+                    ":focus": {
+                      "background-color": "#d3dadc"
+                    },
+                    "border-radius": "8px"
+                  },
+                  "title": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "bold",
+                    "font-size": "26px",
+                    "color": "#4c4c4c"
+                  },
+                  "price": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "18px",
+                    "color": "#4c4c4c"
+                  },
+                  "compareAt": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "15.299999999999999px",
+                    "color": "#4c4c4c"
+                  },
+                  "unitPrice": {
+                    "font-family": "Helvetica Neue, sans-serif",
+                    "font-weight": "normal",
+                    "font-size": "15.299999999999999px",
+                    "color": "#4c4c4c"
+                  }
+                },
+                "text": {
+                  "button": "Add to cart"
+                }
+              },
+              "option": {},
+              "cart": {
+                "styles": {
+                  "button": {
+                    "font-family": "Geneva, sans-serif",
+                    "color": "#000000",
+                    ":hover": {
+                      "color": "#000000",
+                      "background-color": "#d3dadc"
+                    },
+                    "background-color": "#eaf2f4",
+                    ":focus": {
+                      "background-color": "#d3dadc"
+                    },
+                    "border-radius": "8px"
+                  }
+                },
+                "text": {
+                  "total": "Subtotal",
+                  "button": "Checkout"
+                },
+                "popup": false
+              },
+              "toggle": {
+                "styles": {
+                  "toggle": {
+                    "font-family": "Geneva, sans-serif",
+                    "background-color": "#eaf2f4",
+                    ":hover": {
+                      "background-color": "#d3dadc"
+                    },
+                    ":focus": {
+                      "background-color": "#d3dadc"
+                    }
+                  },
+                  "count": {
+                    "color": "#000000",
+                    ":hover": {
+                      "color": "#000000"
+                    }
+                  },
+                  "iconPath": {
+                    "fill": "#000000"
+                  }
+                }
+              }
+            },
+                  });
+                });
+              }
+            })();
+            /*]]>*/
+            </script>           
                     <div class="collection-notes">
                         <div class="note">
                             <img src="media/Rose.png" alt="Rose">
@@ -255,65 +742,221 @@
                             <span>Patchouli</span>
                         </div>
                     </div>
-                    <div class="price-container">
-                        <a href="wholesale.html"><button>Contact us now to place an order</button></a>
-                        <br><br>
-                        <ul style="list-style-type: circle;">
-                            <li><em>7oz Candle - CAD $23.99</em></li>
-                            <li><em>3oz Candle - CAD $13.00</em></li>
-                            <li><em>2oz Wax Melt - CAD $7.99</em></li>
-                        </ul>
-                    </div>
         </section>
 
-        <section id="dhoop" class="collection-headers">
-            <h2>DHOOP</h2>
-            <div class="collection-container">
-                <div class="collection-image-section">
+        <section id="dhoop" class="collection-container">
+            <div id='product-component-1740367517680'></div>
+            <script type="text/javascript">
+                /*<![CDATA[*/
+                (function () {
+                    var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+                    if (window.ShopifyBuy) {
+                        if (window.ShopifyBuy.UI) {
+                            ShopifyBuyInit();
+                        } else {
+                            loadScript();
+                        }
+                    } else {
+                        loadScript();
+                    }
+                    function loadScript() {
+                        var script = document.createElement('script');
+                        script.async = true;
+                        script.src = scriptURL;
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+                        script.onload = ShopifyBuyInit;
+                    }
+                    function ShopifyBuyInit() {
+                        var client = ShopifyBuy.buildClient({
+                            domain: 'yys9b1-vb.myshopify.com',
+                            storefrontAccessToken: '63468f43316e6fa76a8d7242284f8355',
+                        });
+                        ShopifyBuy.UI.onReady(client).then(function (ui) {
+                            ui.createComponent('product', {
+                                id: '8966929711348',
+                                node: document.getElementById('product-component-1740367517680'),
+                                moneyFormat: '%24%7B%7Bamount%7D%7D',
+                                options: {
+                                    "product": {
+                                        "styles": {
+                                            "product": {
+                                                "@media (min-width: 601px)": {
+                                                    "max-width": "100%",
+                                                    "margin-left": "0",
+                                                    "margin-bottom": "50px"
+                                                },
+                                                "text-align": "left"
+                                            },
+                                            "title": {
+                                                "font-size": "26px"
+                                            },
+                                            "button": {
+                                                "font-family": "Geneva, sans-serif",
+                                                "color": "#000000",
+                                                ":hover": {
+                                                    "color": "#000000",
+                                                    "background-color": "#d3dadc"
+                                                },
+                                                "background-color": "#eaf2f4",
+                                                ":focus": {
+                                                    "background-color": "#d3dadc"
+                                                },
+                                                "border-radius": "8px"
+                                            },
+                                            "price": {
+                                                "font-size": "18px"
+                                            },
+                                            "compareAt": {
+                                                "font-size": "15.299999999999999px"
+                                            },
+                                            "unitPrice": {
+                                                "font-size": "15.299999999999999px"
+                                            }
+                                        },
+                                        "layout": "horizontal",
+                                        "contents": {
+                                            "img": false,
+                                            "imgWithCarousel": true,
+                                            "description": true
+                                        },
+                                        "width": "100%",
+                                        "text": {
+                                            "button": "Add to cart"
+                                        },
+                                        "variantId": "all"
+                                    },
+                                    "productSet": {
+                                        "styles": {
+                                            "products": {
+                                                "@media (min-width: 601px)": {
+                                                    "margin-left": "-20px"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "modalProduct": {
+                                        "contents": {
+                                            "img": false,
+                                            "imgWithCarousel": true,
+                                            "button": false,
+                                            "buttonWithQuantity": true
+                                        },
+                                        "styles": {
+                                            "product": {
+                                                "@media (min-width: 601px)": {
+                                                    "max-width": "100%",
+                                                    "margin-left": "0px",
+                                                    "margin-bottom": "0px"
+                                                }
+                                            },
+                                            "button": {
+                                                "font-family": "Geneva, sans-serif",
+                                                "color": "#000000",
+                                                ":hover": {
+                                                    "color": "#000000",
+                                                    "background-color": "#d3dadc"
+                                                },
+                                                "background-color": "#eaf2f4",
+                                                ":focus": {
+                                                    "background-color": "#d3dadc"
+                                                },
+                                                "border-radius": "8px"
+                                            },
+                                            "title": {
+                                                "font-family": "Helvetica Neue, sans-serif",
+                                                "font-weight": "bold",
+                                                "font-size": "26px",
+                                                "color": "#4c4c4c"
+                                            },
+                                            "price": {
+                                                "font-family": "Helvetica Neue, sans-serif",
+                                                "font-weight": "normal",
+                                                "font-size": "18px",
+                                                "color": "#4c4c4c"
+                                            },
+                                            "compareAt": {
+                                                "font-family": "Helvetica Neue, sans-serif",
+                                                "font-weight": "normal",
+                                                "font-size": "15.299999999999999px",
+                                                "color": "#4c4c4c"
+                                            },
+                                            "unitPrice": {
+                                                "font-family": "Helvetica Neue, sans-serif",
+                                                "font-weight": "normal",
+                                                "font-size": "15.299999999999999px",
+                                                "color": "#4c4c4c"
+                                            }
+                                        },
+                                        "text": {
+                                            "button": "Add to cart"
+                                        }
+                                    },
+                                    "option": {},
+                                    "cart": {
+                                        "styles": {
+                                            "button": {
+                                                "font-family": "Geneva, sans-serif",
+                                                "color": "#000000",
+                                                ":hover": {
+                                                    "color": "#000000",
+                                                    "background-color": "#d3dadc"
+                                                },
+                                                "background-color": "#eaf2f4",
+                                                ":focus": {
+                                                    "background-color": "#d3dadc"
+                                                },
+                                                "border-radius": "8px"
+                                            }
+                                        },
+                                        "text": {
+                                            "total": "Subtotal",
+                                            "button": "Checkout"
+                                        },
+                                        "popup": false
+                                    },
+                                    "toggle": {
+                                        "styles": {
+                                            "toggle": {
+                                                "font-family": "Geneva, sans-serif",
+                                                "background-color": "#eaf2f4",
+                                                ":hover": {
+                                                    "background-color": "#d3dadc"
+                                                },
+                                                ":focus": {
+                                                    "background-color": "#d3dadc"
+                                                }
+                                            },
+                                            "count": {
+                                                "color": "#000000",
+                                                ":hover": {
+                                                    "color": "#000000"
+                                                }
+                                            },
+                                            "iconPath": {
+                                                "fill": "#000000"
+                                            }
+                                        }
+                                    }
+                                },
+                            });
+                        });
+                    }
+                })();
+                /*]]>*/
+            </script>
 
-                    <div class="collection-large-image">
-                        <img src="media/dhoop7oz.jpg" alt="dhoop soy candle natural 7 oz ounces">
-                    </div>
-                    <div class="collection-small-images">
-                        <img src="media/dhoop3oz.jpg" alt="dhoop 3 oz soy natural candle ounce">
-                        <img src="media/Dhoopwaxmelt.jpg" alt="dhoop wax melt 2oz ounce">
-                    </div>
+            <div class="collection-notes">
+                <div class="note">
+                    <img src="media/Sandalwood.png" alt="Sandalwood">
+                    <span>Sandalwood</span>
                 </div>
-
-                <div class="collection-text-section">
-                    <p>
-                        Inspired by the warmth of sun rays in the morning time, this scent opens with fresh coriander
-                        and creamy coconut milk. The woody sweetness of sandalwood then emerges, deepened by amber, musk
-                        and cedar for a grounding warmth
-                        <br><br>
-                        Dhoop is a tribute to the simple joys of sitting under the sun- like a peaceful morning in a
-                        courtyard, where golden rays spill across a woven charpai, it’s a fragrance that wraps you in a
-                        quiet sense of connection.
-                    </p>
-
-                    <!-- From Uiverse.io by 3bdel3ziz-T -->
-
-                    <div class="collection-notes">
-                        <div class="note">
-                            <img src="media/Sandalwood.png" alt="Sandalwood">
-                            <span>Sandalwood</span>
-                        </div>
-                        <div class="note">
-                            <img src="media/Amber.png" alt="Amber">
-                            <span>Amber</span>
-                        </div>
-                    </div>
-                    <div class="price-container">
-                        <a href="wholesale.html"><button>Contact us now to place an order</button></a>
-                        <br><br>
-                        <ul style="list-style-type: circle;">
-                            <li><em>7oz Candle - CAD $23.99</em></li>
-                            <li><em>3oz Candle - CAD $13.00</em></li>
-                            <li><em>2oz Wax Melt - CAD $7.99</em></li>
-                        </ul>
-                    </div>
+                <div class="note">
+                    <img src="media/Amber.png" alt="Amber">
+                    <span>Amber</span>
+                </div>
+            </div>
         </section>
-
+<!--
         <section id="bazar" class="collection-headers">
             <h2>BAZAR</h2>
             <div class="collection-container">
@@ -343,7 +986,7 @@
                         tells a story of tradition.
                     </p>
 
-                    <!-- From Uiverse.io by 3bdel3ziz-T -->
+                    
 
                     <div class="collection-notes">
                         <div class="note">
@@ -373,7 +1016,7 @@
                         </ul>
                     </div>
         </section>
-
+  -->
 
         <!-- Footer (Optional) -->
         <footer class="footer">

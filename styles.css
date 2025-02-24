@@ -607,13 +607,10 @@ body {
 
 /* Overall container */
 .collection-container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex start;
-    max-width: 1200px;
-    margin: 0 auto;
+    align-items: center;
     padding: 2rem;
     gap: 2rem;
+    flex-direction: column;
 }
 
 /* Parent container for large and small images */
@@ -697,7 +694,7 @@ body {
 .collection-notes {
     display: flex;
     /* Align items horizontally */
-    justify-content: left;
+    justify-content: center;
     /* Left-align the images */
     align-items: center;
     /* Vertically center the section if needed */
