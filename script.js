@@ -100,3 +100,39 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOM fully loaded and parsed"); // Debugging
+
+  const banner = document.getElementById("announcement-banner");
+  const bannerMessage = document.getElementById("banner-message");
+
+  if (!banner || !bannerMessage) {
+      console.error("Banner or message element not found!");
+      return; // Stop execution if elements are missing
+  }
+
+  // Messages with optional links
+  const messages = [
+    { text: "Use code SAFR10 to get 10% off on any 7oz candle order!! <a href='catalogue.html'>Shop now!</a>" },
+    { text: "Get any three 3oz tins for $33!! <a href='catalogue.html'>Shop now!</a>" },
+    { text: "Hand-poured in Toronto and made with love. <a href='catalogue.html'>Shop now!</a>" }
+];
+
+  let messageIndex = 0;
+
+  // Wait 1 second after full page load before displaying banner
+  setTimeout(() => {
+      console.log("Showing banner...");
+      banner.classList.add("show");
+      bannerMessage.innerHTML = messages[messageIndex].text;
+
+      // Start message slideshow every 5 seconds
+      setInterval(() => {
+          messageIndex = (messageIndex + 1) % messages.length;
+          console.log("Changing banner message to:", messages[messageIndex].text);
+          bannerMessage.innerHTML = messages[messageIndex].text;
+      }, 5000);
+
+  }, 1000);
+});

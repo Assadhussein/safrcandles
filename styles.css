@@ -553,9 +553,67 @@ body {
     color: #333;
 }
 
-/* Utility class to hide/show elements */
+/* Banner Styling */
+.banner {
+    position: relative;
+    width: 100%;
+    background-color: #9c120b; /* Attention-grabbing color */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-100%);
+    display: block;
+    z-index: 9999;
+}
+
+/* Keyframe Animation for Smooth Slide */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    40% {
+        transform: translateY(5%);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Apply Animation when .show is added */
+.banner.show {
+    display: block;
+    animation: slideDown 2s ease-out forwards;
+}
+
+/* Fix `.hidden` so it does not interfere */
 .hidden {
-    display: none !important;
+    display: none;
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+#banner-message {
+    font-size: 18px; /* Adjust text size */
+    font-family: 'Butler', serif; /* Match your site's font */
+    letter-spacing: 1.5px; /* Improve readability */
+}
+
+/* Style links inside the banner */
+#banner-message a {
+    color: #fff; /* Keep links white */
+    text-decoration: underline;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Change link color on hover */
+#banner-message a:hover {
+    color: #ffd700; /* Gold hover effect */
 }
 
 /* Styling for the cards container */
