@@ -557,8 +557,8 @@ body {
 .banner {
     position: relative;
     width: 100%;
-    background-color: #9c120b; /* Attention-grabbing color */
-    color: white;
+    background-color: #eaf2f4; /* Attention-grabbing color */
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 15px 0;
     font-size: 18px;
@@ -602,11 +602,12 @@ body {
     font-size: 18px; /* Adjust text size */
     font-family: 'Butler', serif; /* Match your site's font */
     letter-spacing: 1.5px; /* Improve readability */
+    font-size: smaller;
 }
 
 /* Style links inside the banner */
 #banner-message a {
-    color: #fff; /* Keep links white */
+    color: #000000; /* Keep links white */
     text-decoration: underline;
     transition: color 0.3s ease-in-out;
 }
