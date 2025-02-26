@@ -114,9 +114,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Messages with optional links
   const messages = [
-    { text: "Use code SAFR10 to get 10% off on any 7oz candle order!! <a href='catalogue.html'>Shop now!</a>" },
-    { text: "Get any three 3oz tins for $33!! <a href='catalogue.html'>Shop now!</a>" },
-    { text: "Hand-poured in Toronto and made with love. <a href='catalogue.html'>Shop now!</a>" }
+    { text: "Use code SAFR10 to get 10% off on any 7oz candle order. <a href='catalogue.html'>Shop now!</a>" },
+    { text: "Get any three 3oz tins for $33. <a href='catalogue.html'>Shop now!</a>" },
+    { text: "Free shipping on orders over $120. <a href='catalogue.html'>Shop now!</a>" }
 ];
 
   let messageIndex = 0;
