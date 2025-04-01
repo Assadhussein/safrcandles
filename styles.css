@@ -141,12 +141,6 @@ body {
     text-align: center;
 }
 
-#services.content-section {
-    margin: auto;
-    padding: auto;
-    background-color: #eaf2f4;
-    align-content: center;
-}
 
 #socials.content-section {
     padding: 10px;
@@ -206,16 +200,6 @@ body {
     text-align: center;
     border-radius: 5px;
     /* Optional rounded corners */
-}
-
-.products {
-    height: auto;
-    max-width: 350px;
-    width: 100%;
-    object-fit: contain;
-    padding: 10px;
-    display: inline-flexbox;
-    text-align: center;
 }
 
 /* Subscription Form */
@@ -862,6 +846,92 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 
+
+  .featured-candles {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .featured-candles h2 {
+    font-size: 14px;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    font-family: Futura, sans-serif;
+    color: #123963;
+    letter-spacing: 5px;
+  }
+  
+  .candle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  .candle-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 320px;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  
+  .candle-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .candle-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .candle-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    margin: 10px 0 5px;
+    letter-spacing: 2px;
+  }
+  
+  .candle-card .benefit {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .candle-card .price {
+    font-weight: bold;
+    color: black; /* optional: candle-tone */
+    margin: 10px 0;
+  }
+  
+  .candle-card .badge {
+    display: inline-block;
+    background-color: #fcefe4;
+    color: #7b4b2d;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+
+  .featured-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #eaf2f4;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .featured-btn:hover {
+    background-color: #5f3820;
+  }
 
 @media (max-width: 768px) {
 
