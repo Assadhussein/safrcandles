@@ -836,6 +836,33 @@ body {
     cursor: pointer;
 }
 
+.buy-now-btn {
+    display: inline-block;
+    background-color: #eaf2f4;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    margin-top: 35%;
+    font-size: x-large;
+    z-index: 9999;
+  }
+
+  .buy-now-btn:link,
+  .buy-now-btn:visited,
+  .buy-now-btn:hover,
+  .buy-now-btn:active {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+
+  .buy-now-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+
 @media (max-width: 768px) {
 
     .hamburger {
@@ -1066,6 +1093,10 @@ body {
         scroll-snap-align: center;
         box-sizing: border-box;
         margin: 0 auto;
+    }
+
+    .buy-now-btn {
+        margin-top: 150%;
     }
 }
 
